@@ -1,35 +1,38 @@
-PROCESSO  34208  --->  0 de 1 feito
+PROCESSO  31860  --->  0 de 1 feito
 
                relação entre FOTOS\0\im5 com FOTOS\0\im4
                DIFERENTES 1.0
                
-PROCESSO  17220  --->  0 de 1 feito
+PROCESSO  16832  --->  0 de 1 feito
 
                relação entre FOTOS\0\metade_igual_ao_4_mais_extra com FOTOS\0\im4
                IGUAIS 0.7777777777777778
                
-PROCESSO  26020  --->  0 de 1 feito
+PROCESSO  7384  --->  0 de 1 feito
 
                 relação entre FOTOS\0\metade_igual_ao_4_metade_diferente com FOTOS\0\im4
                 IGUAIS 0.5
                 DIFERENCIADO 0.5
+                prop_igual/prop_dif 1.0
                 
-PROCESSO  31604  --->  0 de 1 feito
-
-               relação entre FOTOS\0\im5 com FOTOS\0\metade_igual_ao_4_metade_diferente
-               DIFERENTES 1.0
-               
-PROCESSO  33296  --->  0 de 1 feito
+PROCESSO  31356  --->  0 de 1 feito
 
                 relação entre FOTOS\0\im5 com FOTOS\0\metade_igual_ao_4_mais_extra
                 IGUAIS 0.2857142857142857
                 DIFERENCIADO 0.7142857142857143
+                prop_igual/prop_dif 0.39999999999999997
                 
-PROCESSO  12568  --->  0 de 1 feito
+PROCESSO  16640  --->  0 de 1 feito
+
+               relação entre FOTOS\0\im5 com FOTOS\0\metade_igual_ao_4_metade_diferente
+               DIFERENTES 1.0
+               
+PROCESSO  18940  --->  0 de 1 feito
 
                 relação entre FOTOS\0\metade_igual_ao_4_mais_extra com FOTOS\0\metade_igual_ao_4_metade_diferente
                 IGUAIS 0.5555555555555556
                 DIFERENCIADO 0.4444444444444444
+                prop_igual/prop_dif 1.2500000000000002
                 
 ---------------------------------------------------------------------------------------------------------------
 -------------------------------------------------
@@ -41,4 +44,4 @@ PROCESSO  12568  --->  0 de 1 feito
 -------------------------------------------------
 -------------------------------------------------
 -------------------------------------------------
-<<The time of the run: 7.98397970199585>>
+<<The time of the run: 7.995225667953491>>

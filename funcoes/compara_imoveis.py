@@ -138,6 +138,7 @@ def classifica_imoveis(iguais,indeterminado,tamanho_imovel_atual,path_imovel_atu
                 relação entre {path_imovel_atual} com {path_imovel_a_comparar}
                 IGUAIS {prop_igual}
                 DIFERENCIADO {prop_dif}
+                prop_igual/prop_dif {prop_igual/prop_dif}
                 """)
             
         elif prop_igual == 0:
@@ -145,12 +146,14 @@ def classifica_imoveis(iguais,indeterminado,tamanho_imovel_atual,path_imovel_atu
                 relação entre {path_imovel_atual} com {path_imovel_a_comparar}
                 INDETERMINADO {prop_ind}
                 DIFERENCIADO {prop_dif}
+                prop_ind/prop_dif {prop_ind/prop_dif}
                 """)
         elif prop_dif == 0:
             print(f"""
                 relação entre {path_imovel_atual} com {path_imovel_a_comparar}
                 IGUAIS {prop_igual}
                 INDETERMINADO {prop_ind}
+                prop_igual/prop_ind {prop_igual/prop_ind}
                 """)
    
 
