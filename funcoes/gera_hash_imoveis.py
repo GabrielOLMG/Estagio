@@ -14,29 +14,28 @@ from funcoes.auxiliares import *
 from imagededup.methods import PHash, DHash
 
 
-def gera_hash_imoveis(CSV_PATH):
+def gera_hash_imoveis(CSV_PATH,PATH_FOTOS):
     """
         DOCUMENTAR
     """
 
-    percorre_pastas(CSV_PATH)
+    percorre_pastas(CSV_PATH,PATH_FOTOS)
 
-def percorre_pastas(CSV_PATH):
+def percorre_pastas(CSV_PATH,PATH_FOTOS):
     """
         DOCUMENTAR
     """
     df = pd.read_csv(CSV_PATH)
-    path_imoveis = list(df["path_imovel"])
-    print(path_imoveis)
-    processos = cria_processos(path_imoveis)
+    info = list(zip(df["ecd"],df["cfr"]))
+    processos = cria_processos(info,PATH_FOTOS)
     inicia_processos(processos)
 
-def cria_processos(LIST_PATH_IMOVEIS):
+def cria_processos(LIST_PATH_IMOVEIS,PATH_FOTOS):
     n_processos = mp.cpu_count()//4 
     imoveis_split = np.array_split(LIST_PATH_IMOVEIS,n_processos)
     lista_p = []
     for i in range(n_processos):
-        processo = mp.Process(target=percorre_imoveis, args=(imoveis_split[i],))
+        processo = mp.Process(target=percorre_imoveis, args=(imoveis_split[i],PATH_FOTOS))
         lista_p.append(processo)
     
     return lista_p
@@ -48,17 +47,19 @@ def inicia_processos(processos):
     for processo in processos:
         processo.join()        
 
-def percorre_imoveis(LIST_PATH_IMOVEIS):
+def percorre_imoveis(IMOVEIS,PATH_FOTOS):
     """
         DOCUMENTAR
     """
     
-    for i,path_imovel in enumerate(LIST_PATH_IMOVEIS):
-        
+    
+    for i,imovel in enumerate(IMOVEIS):
+        path_imovel = os.path.join(PATH_FOTOS,os.path.join(str(imovel[0]),str(imovel[1])))
+        print(path_imovel)
         percorre_imovel(path_imovel)
 
         if i%50 == 0: 
-            print(os.getpid(),' ---> ', i, '-', len(LIST_PATH_IMOVEIS))
+            print(os.getpid(),' ---> ', i, '-', len(IMOVEIS))
 
 def percorre_imovel(PATH_IMOVEL):
     """

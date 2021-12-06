@@ -29,12 +29,10 @@ def percorre_imoveis(CSV_PATH,FOTOS_PATH):
         resto = info[i+1:]
         processos = cria_processos(imovel_atual,resto,FOTOS_PATH)
         inicia_processos(processos)
-          
-        break
         
         
 def cria_processos(imovel_atual,lista_imoveis,FOTOS_PATH):
-    n_processos = 1#mp.cpu_count()//4 
+    n_processos = mp.cpu_count()//4 
 
     imoveis_split = np.array_split(lista_imoveis,n_processos)
     lista_processos = []
@@ -55,19 +53,14 @@ def inicia_processos(processos):
 def percorre_e_compara(imovel_atual, imoveis,FOTOS_PATH):
     
     path_atual = os.path.join(FOTOS_PATH,os.path.join(str(imovel_atual[0]),str(imovel_atual[1])))
-    
-
     img_imovel_atual = os.listdir(path_atual)
-    # print(path_atual,img_imovel_atual)
-      
     for i,imovel_a_comparar in enumerate(imoveis):
         if i%50 == 0: 
             print('PROCESSO ',os.getpid(),' ---> ', i, 'de', len(imoveis), 'feito')
+
         path_comparar = os.path.join(FOTOS_PATH, os.path.join(str(imovel_a_comparar[0]),str(imovel_a_comparar[1])))
         img_imovel_a_comparar = os.listdir(path_comparar)
         verifica_igualdade(path_atual,img_imovel_atual,path_comparar,img_imovel_a_comparar)
-        
-        break
 
 
 def verifica_igualdade(path_imovel_atual,img_imovel_atual,path_imovel_a_comparar,img_imovel_a_comparar):
