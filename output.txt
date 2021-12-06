@@ -1,292 +1,724 @@
-PROCESSO  7328  --->  0 de 136 feito
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 00a9e8c57fd3b4ee642fe93b2f3efc18
+PROCESSO  18904  --->  0 de 4 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\a_copia'
+            <<<iguais = 5 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO IGUAIS
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 138 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 6>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 011c698e9f37b10369a71279b99994c2
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\a_copia2'
+            <<<iguais = 4 diferentes = 20 indeterminados = 1 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 414 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 18>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 029a68b86ac8b89804fd7d6e3393bf3d
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\com_reptido'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 3>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 92 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 4>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 02b02406e3e8842192ef2e00d47f8521
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\im1'
+            <<<iguais = 0 diferentes = 25 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 92 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 4>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 02ef71116cce3d5eafabff304c65a721
+PROCESSO  27236  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\im2'
+            <<<iguais = 0 diferentes = 25 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 207 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 9>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 036da93af2f7e9841c475498bfe148fb
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\im3'
+            <<<iguais = 0 diferentes = 25 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 46 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 2>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 03df0a80f651c2f0f57d42df86ae6945
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\im4'
+            <<<iguais = 0 diferentes = 75 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 15>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 138 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 6>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 03df111efd1f2d3fb867d88fc4e1d3bd
+PROCESSO  30508  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\predio_castelhana'
+            <<<iguais = 0 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 299 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 13>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 043629444b0a331bfae779f7380ce692
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\predio_remax'
+            <<<iguais = 0 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 437 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 19>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 044db775e26d8428a389e2ad97954534
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 0 diferentes = 5 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 1>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 460 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 20>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 056218474102c5d83964ee576d80ec2e
+PROCESSO  14572  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\im5'
+            <<<iguais = 0 diferentes = 35 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 7>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 690 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 30>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 05d7cabf484240d55a13dd25bdb52953
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\im6=im5'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 3>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 138 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 6>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 0772f6aa3b32756f1d03ddf01542e58a
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_a_original' com 'FOTOS\0\imovel1'
+            <<<iguais = 0 diferentes = 80 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 16>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 713 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 31>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 094b4cf2206a6c5cd2ab57d9a53fa461
+PROCESSO  31624  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia' com 'FOTOS\0\a_copia2'
+            <<<iguais = 4 diferentes = 20 indeterminados = 1 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 368 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 16>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 09d66bff1c8d37bcea471cfed2f53c4b
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia' com 'FOTOS\0\com_reptido'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 3>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-PROCESSO  5328  --->  0 de 135 feito
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com bde282d508138d0fa8bf657a1e2caee5
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia' com 'FOTOS\0\im1'
+            <<<iguais = 0 diferentes = 25 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 207 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 9>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com be06d4cb5fcecd6ae87f8fcba448eb7d
+PROCESSO  8400  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia' com 'FOTOS\0\predio_castelhana'
+            <<<iguais = 0 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 276 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 12>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com beac6dabfab021b1652e8754f763f974
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia' com 'FOTOS\0\predio_remax'
+            <<<iguais = 0 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 161 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 7>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com bedc79ea927c0ec6d8f3fd8e8f0e5a49
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 0 diferentes = 5 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 1>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 483 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 21>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com bef5032414c990dcb4595adf0a29d1c6
+PROCESSO  24580  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia' com 'FOTOS\0\im2'
+            <<<iguais = 0 diferentes = 25 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 345 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 15>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com bf426b1777d22ede48d86e8d35026327
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia' com 'FOTOS\0\im3'
+            <<<iguais = 0 diferentes = 25 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 391 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 17>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com bf4d76095d5cc2ae12bf0d8049ef2794
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia' com 'FOTOS\0\im4'
+            <<<iguais = 0 diferentes = 75 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 15>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 92 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 4>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com bfa5b07c28e943976989e613e4216bc9
+PROCESSO  22768  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia' com 'FOTOS\0\im5'
+            <<<iguais = 0 diferentes = 35 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 7>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 345 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 15>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com bfc880bcf105589155f2de3d10e62b25
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia' com 'FOTOS\0\im6=im5'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 3>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 414 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 18>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com bfeb5261ac7cbb1fb0e017e40eeb30a5
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia' com 'FOTOS\0\imovel1'
+            <<<iguais = 0 diferentes = 80 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 16>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 115 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 5>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com c0a06ed6e725fc67755f620f12a06f9b
+PROCESSO  15532  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia2' com 'FOTOS\0\com_reptido'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 3>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 138 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 6>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com c0c0567bf9683ec3a6456cf6cdae3557
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia2' com 'FOTOS\0\im1'
+            <<<iguais = 0 diferentes = 25 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 230 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 10>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com c1c4bd8276a4816d3783a183a1c8bac1
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia2' com 'FOTOS\0\im2'
+            <<<iguais = 0 diferentes = 25 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 230 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 10>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com c374c15dd42ce4c54e4762a6b1d2631a
+PROCESSO  17744  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia2' com 'FOTOS\0\predio_remax'
+            <<<iguais = 0 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-PROCESSO  33176  --->  0 de 136 feito
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 3f64d62f5e9dbd129999131f2749c347
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia2' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 0 diferentes = 5 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 1>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 529 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 23>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 3fa5368dea72ed6de9bb924f62528e7d
+PROCESSO  9164  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia2' com 'FOTOS\0\im6=im5'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 3>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 483 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 21>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 4064b24fdcb6c6fd511be90d8bdba79a
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia2' com 'FOTOS\0\imovel1'
+            <<<iguais = 0 diferentes = 80 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 16>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 230 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 10>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 407977ddea739c3fe11c067cd818c41c
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia2' com 'FOTOS\0\predio_castelhana'
+            <<<iguais = 0 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 621 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 27>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 40aac22111fd31c5963122234acea674
+PROCESSO  13648  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia2' com 'FOTOS\0\im3'
+            <<<iguais = 0 diferentes = 25 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 299 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 13>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 411b0592ef4cbff66f19b1d4dc23d411
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia2' com 'FOTOS\0\im4'
+            <<<iguais = 0 diferentes = 75 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 15>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 460 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 20>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 41744bdf9bf0a3c66b7a2a214b0cc6f8
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\a_copia2' com 'FOTOS\0\im5'
+            <<<iguais = 0 diferentes = 35 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 7>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 161 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 7>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 41f132aee21fad38237f5c1e06cb44e1
+PROCESSO  32036  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\com_reptido' com 'FOTOS\0\im4'
+            <<<iguais = 0 diferentes = 45 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 15>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 552 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 24>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 4344f0e8411fd93410bb3793f3d8190d
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\com_reptido' com 'FOTOS\0\im5'
+            <<<iguais = 3 diferentes = 18 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 7>>> 
+            REALMENTE SAO IGUAIS
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 391 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 17>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 4381278cd582da00579a2988d07e7406
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\com_reptido' com 'FOTOS\0\im6=im5'
+            <<<iguais = 3 diferentes = 6 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 3>>> 
+            REALMENTE SAO IGUAIS
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 161 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 7>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 4405507cfc6e8bd5f68155cdd879bfa5
+PROCESSO  33556  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\com_reptido' com 'FOTOS\0\predio_remax'
+            <<<iguais = 0 diferentes = 12 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-PROCESSO  1496  --->  0 de 136 feito
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 7fd3ad3a39274fbd728d8f65d92ff3e5
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\com_reptido' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 1 diferentes = 2 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 1>>> 
+            
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 414 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 18>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 8006f70a8f70bb9f50602d0c1db9b16a
+PROCESSO  1716  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\com_reptido' com 'FOTOS\0\im1'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
-<<<iguais = 0 diferentes = 851 indeterminados = 0 tamanho_atual = 23 tamanho_a_comparar = 37>>>
-<<<proporcao igual/indeterminados = 1.0>>>
-REALMENTE SAO DIFERENTES
--------------------------------------------------
--------------------------------------------------
-           comparando 009e51ecf56b15b06307a101504d3536 com 8057e7c9162e1752bc4057c2db5e9632
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\com_reptido' com 'FOTOS\0\im2'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
            
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\com_reptido' com 'FOTOS\0\im3'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  13204  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\com_reptido' com 'FOTOS\0\imovel1'
+            <<<iguais = 0 diferentes = 48 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 16>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\com_reptido' com 'FOTOS\0\predio_castelhana'
+            <<<iguais = 0 diferentes = 12 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  24032  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im1' com 'FOTOS\0\im5'
+            <<<iguais = 0 diferentes = 35 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 7>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im1' com 'FOTOS\0\im6=im5'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 3>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  14680  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im1' com 'FOTOS\0\predio_remax'
+            <<<iguais = 0 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im1' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 0 diferentes = 5 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 1>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  13152  --->  0 de 3 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im1' com 'FOTOS\0\im2'
+            <<<iguais = 5 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO IGUAIS
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im1' com 'FOTOS\0\im3'
+            <<<iguais = 5 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO IGUAIS
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im1' com 'FOTOS\0\im4'
+            <<<iguais = 0 diferentes = 75 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 15>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  2496  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im1' com 'FOTOS\0\imovel1'
+            <<<iguais = 0 diferentes = 80 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 16>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im1' com 'FOTOS\0\predio_castelhana'
+            <<<iguais = 0 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  26280  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im2' com 'FOTOS\0\im3'
+            <<<iguais = 5 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 5>>> 
+            REALMENTE SAO IGUAIS
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im2' com 'FOTOS\0\im4'
+            <<<iguais = 0 diferentes = 75 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 15>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  3624  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im2' com 'FOTOS\0\im5'
+            <<<iguais = 0 diferentes = 35 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 7>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im2' com 'FOTOS\0\im6=im5'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 3>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  4704  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im2' com 'FOTOS\0\predio_remax'
+            <<<iguais = 0 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im2' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 0 diferentes = 5 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 1>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  19424  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im2' com 'FOTOS\0\imovel1'
+            <<<iguais = 0 diferentes = 80 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 16>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im2' com 'FOTOS\0\predio_castelhana'
+            <<<iguais = 0 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  8832  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im3' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 0 diferentes = 5 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 1>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  17900  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im3' com 'FOTOS\0\im6=im5'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 3>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im3' com 'FOTOS\0\imovel1'
+            <<<iguais = 0 diferentes = 80 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 16>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  14568  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im3' com 'FOTOS\0\im4'
+            <<<iguais = 0 diferentes = 75 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 15>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im3' com 'FOTOS\0\im5'
+            <<<iguais = 0 diferentes = 35 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 7>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  24008  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im3' com 'FOTOS\0\predio_castelhana'
+            <<<iguais = 0 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im3' com 'FOTOS\0\predio_remax'
+            <<<iguais = 0 diferentes = 20 indeterminados = 0 tamanho_atual = 5 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  21028  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im4' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 0 diferentes = 15 indeterminados = 0 tamanho_atual = 15 tamanho_a_comparar = 1>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  25812  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im4' com 'FOTOS\0\predio_remax'
+            <<<iguais = 0 diferentes = 60 indeterminados = 0 tamanho_atual = 15 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  9696  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im4' com 'FOTOS\0\im5'
+            <<<iguais = 0 diferentes = 105 indeterminados = 0 tamanho_atual = 15 tamanho_a_comparar = 7>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im4' com 'FOTOS\0\im6=im5'
+            <<<iguais = 0 diferentes = 45 indeterminados = 0 tamanho_atual = 15 tamanho_a_comparar = 3>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  11428  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im4' com 'FOTOS\0\imovel1'
+            <<<iguais = 0 diferentes = 240 indeterminados = 0 tamanho_atual = 15 tamanho_a_comparar = 16>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im4' com 'FOTOS\0\predio_castelhana'
+            <<<iguais = 0 diferentes = 60 indeterminados = 0 tamanho_atual = 15 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  29816  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im5' com 'FOTOS\0\predio_remax'
+            <<<iguais = 0 diferentes = 28 indeterminados = 0 tamanho_atual = 7 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  9024  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im5' com 'FOTOS\0\predio_castelhana'
+            <<<iguais = 0 diferentes = 28 indeterminados = 0 tamanho_atual = 7 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  27308  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im5' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 1 diferentes = 6 indeterminados = 0 tamanho_atual = 7 tamanho_a_comparar = 1>>> 
+            
+            -------------------------------------------------
+           
+PROCESSO  25536  --->  0 de 2 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im5' com 'FOTOS\0\im6=im5'
+            <<<iguais = 3 diferentes = 18 indeterminados = 0 tamanho_atual = 7 tamanho_a_comparar = 3>>> 
+            
+            -------------------------------------------------
+           
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im5' com 'FOTOS\0\imovel1'
+            <<<iguais = 0 diferentes = 112 indeterminados = 0 tamanho_atual = 7 tamanho_a_comparar = 16>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  588  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im6=im5' com 'FOTOS\0\predio_castelhana'
+            <<<iguais = 0 diferentes = 12 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  31296  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im6=im5' com 'FOTOS\0\predio_remax'
+            <<<iguais = 0 diferentes = 12 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  22920  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im6=im5' com 'FOTOS\0\imovel1'
+            <<<iguais = 0 diferentes = 48 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 16>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  21872  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\im6=im5' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 1 diferentes = 2 indeterminados = 0 tamanho_atual = 3 tamanho_a_comparar = 1>>> 
+            
+            -------------------------------------------------
+           
+PROCESSO  31768  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\imovel1' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 0 diferentes = 16 indeterminados = 0 tamanho_atual = 16 tamanho_a_comparar = 1>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  9676  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\imovel1' com 'FOTOS\0\predio_remax'
+            <<<iguais = 0 diferentes = 64 indeterminados = 0 tamanho_atual = 16 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  10856  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\imovel1' com 'FOTOS\0\predio_castelhana'
+            <<<iguais = 0 diferentes = 64 indeterminados = 0 tamanho_atual = 16 tamanho_a_comparar = 4>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  14996  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\predio_castelhana' com 'FOTOS\0\predio_remax'
+            <<<iguais = 0 diferentes = 13 indeterminados = 3 tamanho_atual = 4 tamanho_a_comparar = 4>>> 
+            
+            -------------------------------------------------
+           
+PROCESSO  24636  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\predio_castelhana' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 0 diferentes = 4 indeterminados = 0 tamanho_atual = 4 tamanho_a_comparar = 1>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+PROCESSO  23964  --->  0 de 1 feito
+
+            ------------------------------------------------
+            comparando 'FOTOS\0\predio_remax' com 'FOTOS\0\tamanho_diferente'
+            <<<iguais = 0 diferentes = 4 indeterminados = 0 tamanho_atual = 4 tamanho_a_comparar = 1>>> 
+            REALMENTE SAO DIFERENTES
+            -------------------------------------------------
+           
+---------------------------------------------------------------------------------------------------------------
 -------------------------------------------------
 -------------------------------------------------
 -------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+<<The time of the run: 19.6489999294281>>

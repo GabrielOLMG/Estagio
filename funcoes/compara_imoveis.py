@@ -19,8 +19,6 @@ def percorre_imoveis(CSV_PATH,FOTOS_PATH):
     df = pd.read_csv(CSV_PATH)
     info = list(zip(df["ecd"],df["cfr"]))
 
-    print(info[0:10])
-    # return
     for i in range(len(info)-1):
         print(f"""-------------------------------------------------""")    
         print(f"""-------------------------------------------------""")    
@@ -29,7 +27,7 @@ def percorre_imoveis(CSV_PATH,FOTOS_PATH):
         resto = info[i+1:]
         processos = cria_processos(imovel_atual,resto,FOTOS_PATH)
         inicia_processos(processos)
-        
+        # break
         
 def cria_processos(imovel_atual,lista_imoveis,FOTOS_PATH):
     n_processos = mp.cpu_count()//4 
@@ -64,10 +62,6 @@ def percorre_e_compara(imovel_atual, imoveis,FOTOS_PATH):
 
 
 def verifica_igualdade(path_imovel_atual,img_imovel_atual,path_imovel_a_comparar,img_imovel_a_comparar):
-    #path_imovel_atual = os.path.join("\\".join(imovel_atual[1].split('\\')[:-1]),imovel_atual)
-    print(f"""-------------------------------------------------
-           comparando '{path_imovel_atual}' com '{path_imovel_a_comparar}'
-           """)
     iguais = 0
     indeterminado = 0
     diferentes = 0
@@ -75,9 +69,9 @@ def verifica_igualdade(path_imovel_atual,img_imovel_atual,path_imovel_a_comparar
         for img_comparar in img_imovel_a_comparar:
             path_img_atual = os.path.join(path_imovel_atual,img_atual)
             path_img_comparar = os.path.join(path_imovel_a_comparar,img_comparar)
-
-            dhash_atual = calcula_hashs(path_img_atual)[0]
-            dhash_comparar = calcula_hashs(path_img_comparar)[0]
+            
+            dhash_atual = le_metadata(path_img_atual)["dhash"]
+            dhash_comparar = le_metadata(path_img_comparar)["dhash"]
 
             distancia_hash = hamming_distance(dhash_atual,dhash_comparar)
 
@@ -91,17 +85,25 @@ def verifica_igualdade(path_imovel_atual,img_imovel_atual,path_imovel_a_comparar
             else:
                 diferentes+=1 
 
-    print(f"<<<iguais = {iguais} diferentes = {diferentes} indeterminados = {indeterminado} tamanho_atual = {len(img_imovel_atual)} tamanho_a_comparar = {len(img_imovel_a_comparar)}>>>")
-    print(f"<<<proporcao igual/indeterminados = {(iguais+1)/(indeterminado+1)}>>>")
-    # casos bases
+    texto = ""
     if(iguais == len(img_imovel_atual)):
-        print("REALMENTE SAO IGUAIS")
+        texto = "REALMENTE SAO IGUAIS"
     elif(indeterminado == len(img_imovel_atual)):
-        print("REALMENTE SAO DUVIDOSOS")
+        texto = "REALMENTE SAO DUVIDOSOS"
     elif (diferentes == (len(img_imovel_atual)*len(img_imovel_a_comparar))):
-        print("REALMENTE SAO DIFERENTES")
+        texto = "REALMENTE SAO DIFERENTES"
 
-    print(f"""-------------------------------------------------""")        
+    print(f"""
+            ------------------------------------------------
+            comparando '{path_imovel_atual}' com '{path_imovel_a_comparar}'
+            <<<iguais = {iguais} diferentes = {diferentes} indeterminados = {indeterminado} tamanho_atual = {len(img_imovel_atual)} tamanho_a_comparar = {len(img_imovel_a_comparar)}>>> 
+            {texto}
+            -------------------------------------------------
+           """)
+    # casos bases
+    
+
+    
 
 
 

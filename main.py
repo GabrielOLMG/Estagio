@@ -13,12 +13,12 @@ if __name__ == "__main__":
         - gera as hash
         - verifica se  tem imagem repetida dentro e deleta as que estão repetidas
     '''
-    start = time.time()
-    gera_hash_imoveis(CSV_PATH_TESTE,PATH_FOTOS) # ja feito
-    stop = time.time()
-    print(f"<<The time of the run: {stop - start}>>")
+    # start = time.time()
+    # gera_hash_imoveis(CSV_PATH_TESTE,PATH_FOTOS) # ja feito
+    # stop = time.time()
+    # print(f"<<The time of the run: {stop - start}>>")
 
-
+    print("---------------------------------------------------------------------------------------------------------------")
     '''
     # Passo 2 - Compara imoveis
         - compara imovel com imove
@@ -29,6 +29,7 @@ if __name__ == "__main__":
         - se dois imoveis são indeterminados, devo criar um csv contendo essa informação (imovel1 imovel2)
 
     '''
-    # start = time.time()
-    # compara_imoveis(CSV_PATH_TESTE,PATH_FOTOS)
-    # stop = time.time()
+    start = time.time()
+    compara_imoveis(CSV_PATH_TESTE,PATH_FOTOS)
+    stop = time.time()
+    print(f"<<The time of the run: {stop - start}>>")

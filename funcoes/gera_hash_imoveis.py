@@ -55,7 +55,6 @@ def percorre_imoveis(IMOVEIS,PATH_FOTOS):
     
     for i,imovel in enumerate(IMOVEIS):
         path_imovel = os.path.join(PATH_FOTOS,os.path.join(str(imovel[0]),str(imovel[1])))
-        print(path_imovel)
         percorre_imovel(path_imovel)
 
         if i%50 == 0: 
