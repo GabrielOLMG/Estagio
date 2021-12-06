@@ -8,6 +8,7 @@ if __name__ == "__main__":
     PATH_FOTOS = "FOTOS"
     CSV_PATH = "CSV_FILES\dados_gabriel.csv"
     CSV_PATH_TESTE = "CSV_FILES/imoveis.csv"
+    CSV_PATH_OUTPUT = "CSV_OUTPUT/"
     '''
     Passo 1 
         - gera as hash
@@ -30,6 +31,6 @@ if __name__ == "__main__":
 
     '''
     start = time.time()
-    compara_imoveis(CSV_PATH_TESTE,PATH_FOTOS)
+    compara_imoveis(CSV_PATH_TESTE,PATH_FOTOS,CSV_PATH_OUTPUT)
     stop = time.time()
     print(f"<<The time of the run: {stop - start}>>")

@@ -117,6 +117,7 @@ def analisa_duplicadas(duplicadas,PATH_IMOVEL):
                 maior_tamanho = area
             else:
                 para_remover.append(path_image)
+                
 
     return para_remover
 
