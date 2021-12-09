@@ -4,3 +4,9 @@ im8_5_iguais_ao_4_porem_1_diferente,im4,0.8333333333333334,0.16666666666666663,0
 im7_2_iguais_ao_4,im8_5_iguais_ao_4_porem_1_diferente,1.0,0.0,0.0
 im7_2_iguais_ao_4,im9_5_iguais_ao_4_porem_3_diferente,1.0,0.0,0.0
 im8_5_iguais_ao_4_porem_1_diferente,im9_5_iguais_ao_4_porem_3_diferente,1.0,0.0,0.0
+a_a_original,a_copia,1.0,0.0,0.0
+a_a_original,a_copia2,0.8,0.0,0.2
+a_copia,a_copia2,0.8,0.0,0.2
+com_reptido,im5,1.0,0.0,0.0
+com_reptido,im6=im5,1.0,0.0,0.0
+tamanho_diferente,com_reptido,1.0,0.0,0.0

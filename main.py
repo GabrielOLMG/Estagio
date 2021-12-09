@@ -15,7 +15,7 @@ if __name__ == "__main__":
         - verifica se  tem imagem repetida dentro e deleta as que estão repetidas
     '''
     # start = time.time()
-    # gera_hash_imoveis(CSV_PATH_TESTE,PATH_FOTOS) # ja feito
+    gera_hash_imoveis(CSV_PATH_TESTE,PATH_FOTOS) # ja feito
     # stop = time.time()
     # print(f"<<The time of the run: {stop - start}>>")
 

@@ -1,43 +1,109 @@
-PROCESSO  24968  --->  0 de 1 feito
-PROCESSO  15124  --->  0 de 2 feito
-PROCESSO  15124  --->  0 de 1 feito
-PROCESSO  29524  --->  0 de 2 feito
-PROCESSO  3564  --->  0 de 1 feito
-PROCESSO  31192  --->  0 de 1 feito
-PROCESSO  28436  --->  0 de 1 feito
-PROCESSO  17868  --->  0 de 2 feito
-PROCESSO  19668  --->  0 de 1 feito
-PROCESSO  19668  --->  0 de 1 feito
-PROCESSO  9240  --->  0 de 1 feito
-PROCESSO  9240  --->  0 de 1 feito
-PROCESSO  14664  --->  0 de 1 feito
-PROCESSO  14664  --->  0 de 1 feito
-PROCESSO  14880  --->  0 de 1 feito
-PROCESSO  2912  --->  0 de 1 feito
-PROCESSO  21720  --->  0 de 1 feito
-PROCESSO  7084  --->  0 de 1 feito
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\a_a_original
+            #-------------------------------#
+            
+32980  --->  0 - 4
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\ex1
+            #-------------------------------#
+            
+14296  --->  0 - 4
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\im3
+            #-------------------------------#
+            
+18032  --->  0 - 4
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\imovel1
+            #-------------------------------#
+            
+19600  --->  0 - 4
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\a_copia
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\ex1_ind
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\predio_castelhana
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\im4
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\a_copia2
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\im1
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\predio_remax
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\im5
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\com_reptido
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\im2
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\tamanho_diferente
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            removidos 0 na pasta FOTOS\1\im6=im5
+            #-------------------------------#
+            
+PROCESSO  9272  --->  0 de 3 feito
+PROCESSO  11512  --->  0 de 4 feito
+PROCESSO  25932  --->  0 de 4 feito
+PROCESSO  16864  --->  0 de 4 feito
+PROCESSO  25868  --->  0 de 3 feito
+PROCESSO  21080  --->  0 de 3 feito
+PROCESSO  10472  --->  0 de 4 feito
+PROCESSO  15900  --->  0 de 4 feito
+PROCESSO  8272  --->  0 de 3 feito
+PROCESSO  15276  --->  0 de 3 feito
+PROCESSO  25516  --->  0 de 3 feito
+PROCESSO  32640  --->  0 de 4 feito
+PROCESSO  25812  --->  0 de 3 feito
+PROCESSO  16576  --->  0 de 3 feito
+PROCESSO  6500  --->  0 de 3 feito
+PROCESSO  2956  --->  0 de 3 feito
+PROCESSO  30428  --->  0 de 2 feito
+PROCESSO  13320  --->  0 de 3 feito
+PROCESSO  1148  --->  0 de 3 feito
+PROCESSO  1072  --->  0 de 3 feito
+PROCESSO  3860  --->  0 de 2 feito
+PROCESSO  12272  --->  0 de 3 feito
+PROCESSO  28588  --->  0 de 2 feito
+PROCESSO  32588  --->  0 de 3 feito
 ---------------------------------------------------------------------------------------------------------------
-Empty DataFrame
-Columns: [imovel1, imovel2, proporcao_de_iguais, proporcao_de_diferentes, proporcao_de_indeterminados]
-Index: []
-                               imovel1  ... proporcao_de_indeterminados
-0                    im7_2_iguais_ao_4  ...                         0.0
-1  im8_5_iguais_ao_4_porem_1_diferente  ...                         0.0
-
-[2 rows x 5 columns]
-Empty DataFrame
-Columns: [imovel1, imovel2, proporcao_de_iguais, proporcao_de_diferentes, proporcao_de_indeterminados]
-Index: []
-Empty DataFrame
-Columns: [imovel1, imovel2, proporcao_de_iguais, proporcao_de_diferentes, proporcao_de_indeterminados]
-Index: []
-             imovel1  ... proporcao_de_indeterminados
-0  im7_2_iguais_ao_4  ...                         0.0
-1  im7_2_iguais_ao_4  ...                         0.0
-
-[2 rows x 5 columns]
-                               imovel1  ... proporcao_de_indeterminados
-0  im8_5_iguais_ao_4_porem_1_diferente  ...                         0.0
-
-[1 rows x 5 columns]
-<<The time of the run: 16.09004545211792>>

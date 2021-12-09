@@ -2,8 +2,7 @@ from logging import disable
 import os
 import numpy as np
 import pandas as pd
-import multiprocessing as mp
-from multiprocessing import Process, Manager, Pool
+from multiprocessing import Pool
 from funcoes.auxiliares import *
 
 from funcoes.configuracao import *
@@ -19,42 +18,19 @@ def percorre_imoveis(CSV_PATH,FOTOS_PATH,CSV_PATH_OUTPUT):
     info = list(zip(df["ecd"],df["cfr"]))
     for i in range(len(info)-1):
         imovel_atual = info[i]
-        # print(imovel_atual)
         resto = info[i+1:]
         cria_processos(imovel_atual,resto,FOTOS_PATH,CSV_PATH_OUTPUT)
 
-    # print(respostas)
-
-
-
 def cria_processos(imovel_atual,lista_imoveis,FOTOS_PATH,CSV_PATH_OUTPUT):
-    manager = mp.Manager()
-    return_dict = manager.dict()
     imoveis_split = np.array_split(lista_imoveis,N_PROCESSOS)
     # lista_processos = []
     inputs_list = gera_inputs_pool(imovel_atual,imoveis_split,FOTOS_PATH)
     with Pool(processes=N_PROCESSOS) as pool:
         valores = pool.starmap(percorre_e_compara,inputs_list)
-
-    # atualiza_csv(CSV_PATH_OUTPUT,list(return_dict.values())
     flat_list = [item for sublist in valores for item in sublist]
     atualiza_csv(CSV_PATH_OUTPUT,flat_list) 
-    # for i in range(N_PROCESSOS):
-    #     processo = mp.Process(target=percorre_e_compara, args=(i,imovel_atual,imoveis_split[i],FOTOS_PATH,return_dict))
-    #     lista_processos.append(processo)
-
-    # for processo in lista_processos:
-    #     processo.start()
-
-    # for processo in lista_processos:
-    #     processo.join()
-
-    # atualiza_csv(CSV_PATH_OUTPUT,list(return_dict.values()))  
-        
-    
 
 def percorre_e_compara(imovel_atual, imoveis,FOTOS_PATH):
-
     path_atual = os.path.join(FOTOS_PATH,os.path.join(str(imovel_atual[0]),str(imovel_atual[1])))
     img_imovel_atual = os.listdir(path_atual)
     resultados = []
@@ -73,12 +49,6 @@ def percorre_e_compara(imovel_atual, imoveis,FOTOS_PATH):
 def verifica_igualdade(path_imovel_atual,img_imovel_atual,path_imovel_a_comparar,img_imovel_a_comparar):
     iguais = 0
     indeterminado = 0
-    
-    '''
-        Se eu estou olhando para A e A esta contido em B, 
-        então n tem problema, mas se estou olhando para B,
-        o valor dos iguais não fara sentido
-    '''
     if len(img_imovel_atual) > len(img_imovel_a_comparar):
         maior = [path_imovel_atual,img_imovel_atual]
         menor = [path_imovel_a_comparar,img_imovel_a_comparar]
@@ -93,7 +63,6 @@ def verifica_igualdade(path_imovel_atual,img_imovel_atual,path_imovel_a_comparar
             
             dhash_atual = le_metadata(path_img_atual)["dhash"]
             dhash_comparar = le_metadata(path_img_comparar)["dhash"]
-
             distancia_hash = hamming_distance(dhash_atual,dhash_comparar)
 
             valor = define_intervalo(distancia_hash, "dhash")
@@ -113,22 +82,13 @@ def classifica_imoveis(iguais,indeterminado,tamanho_imovel_atual,path_imovel_atu
     todas_proporcoes = (prop_igual,prop_ind,prop_dif)
     if prop_igual >= PROPORCAO_IGUAIS and diferentes <= DIFERENCA_MAXIMA:
         return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, 1)
-        # print(f"[Iguais] com uma proporcao de {prop_igual} {path_imovel_atual} -> {path_imovel_a_comparar} \n")
     elif prop_dif >= PROPORCAO_DIFERENTES:
         return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, 3)
-        # print(f"[Diferentes] com uma proporcao de {prop_dif} {path_imovel_atual} -> {path_imovel_a_comparar} \n")
     elif (prop_igual <= PROPORCAO_IGUAIS and iguais >=1) or (prop_ind >= PROPORCAO_INDETERMINADOS):
         return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, 2)
-        # print(f"[Ver Manualmente] PI ={prop_igual} PInd = {prop_ind} PD = {prop_dif} {path_imovel_atual} -> {path_imovel_a_comparar} \n")
     else:
         return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, -1)
-        # print("ALGUM CASO QUE NÃO ESTOU VENDO!!!!!!!!!!!!!!!!!!!!!!!!")
     
-    
-   
-
-
-
 def define_intervalo(distancia, tipo):
     if tipo == "dhash":
         if distancia <= DHASH_MIN: # IGUAIS

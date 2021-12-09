@@ -92,6 +92,8 @@ def cria_csv(CSV_PATH):
         df.to_csv(CSV_PATH,index=False)
 
 def atualiza_csv(CSV_PATH, lista):
+     # esta colocando a mesma informação no csv
+     # n esta vendo se tem no ideterminado ou igual antes de colocar no diferente
     iguais = {"imovel1":[], "imovel2" :[],"proporcao_de_iguais" :[],"proporcao_de_diferentes" :[],"proporcao_de_indeterminados" :[]}
     diferentes = {"imovel1":[], "imovel2" :[],"proporcao_de_iguais" :[],"proporcao_de_diferentes" :[],"proporcao_de_indeterminados" :[]}
     indeterminados = {"imovel1":[], "imovel2" :[],"proporcao_de_iguais" :[],"proporcao_de_diferentes" :[],"proporcao_de_indeterminados" :[]}
@@ -111,18 +113,17 @@ def atualiza_csv(CSV_PATH, lista):
         escolhido["proporcao_de_diferentes"].append(proporcao[2])
         escolhido["proporcao_de_indeterminados"].append(proporcao[1])
 
+    # diferentes = pd.DataFrame(diferentes)
+    # csv_diferentes = os.path.join(CSV_PATH,"diferentes.csv")
+    # cria_csv(csv_diferentes)
+    # diferentes.to_csv(csv_diferentes, mode='a', index=False, header=False)
+    
     iguais = pd.DataFrame(iguais)
-    diferentes = pd.DataFrame(diferentes)
-    indeterminados = pd.DataFrame(indeterminados)
-    print(iguais)
     csv_iguais = os.path.join(CSV_PATH,"iguais.csv")
     cria_csv(csv_iguais)
     iguais.to_csv(csv_iguais, mode='a', index=False, header=False)
 
-    csv_diferentes = os.path.join(CSV_PATH,"diferentes.csv")
-    cria_csv(csv_diferentes)
-    diferentes.to_csv(csv_diferentes, mode='a', index=False, header=False)
-
+    indeterminados = pd.DataFrame(indeterminados)
     csv_indeterminados = os.path.join(CSV_PATH,"indeterminados.csv")
     cria_csv(csv_indeterminados)
     indeterminados.to_csv(csv_indeterminados, mode='a', index=False, header=False)
