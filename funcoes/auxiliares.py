@@ -79,60 +79,54 @@ def le_metadata(PATH_IMAGEM):
 import pandas as pd
 import os
 
-def cria_csv(CSV_PATH,valores):
-    dicionario = {"imovel1":valores["imovel1"],
-                  "imovel2" :valores["imovel2"],
-                  "proporcao_de_iguais" : valores["proporcao_de_iguais"],
-                  "proporcao_de_diferentes" : valores["proporcao_de_diferentes"],
-                  "proporcao_de_indeterminados" : valores["proporcao_de_indeterminados"]}
-    df = pd.DataFrame(dicionario)
-    df.to_csv(CSV_PATH,index=False)
+def cria_csv(CSV_PATH):
+    try:
+        pd.read_csv(CSV_PATH)
+    except:
+        dicionario = {"imovel1":[],
+                      "imovel2" :[],
+                      "proporcao_de_iguais" : [],
+                      "proporcao_de_diferentes" : [],
+                      "proporcao_de_indeterminados" : []}
+        df = pd.DataFrame(dicionario)
+        df.to_csv(CSV_PATH,index=False)
 
 def atualiza_csv(CSV_PATH, lista):
-    print("COLOCA NO CSV", lista)
     iguais = {"imovel1":[], "imovel2" :[],"proporcao_de_iguais" :[],"proporcao_de_diferentes" :[],"proporcao_de_indeterminados" :[]}
     diferentes = {"imovel1":[], "imovel2" :[],"proporcao_de_iguais" :[],"proporcao_de_diferentes" :[],"proporcao_de_indeterminados" :[]}
     indeterminados = {"imovel1":[], "imovel2" :[],"proporcao_de_iguais" :[],"proporcao_de_diferentes" :[],"proporcao_de_indeterminados" :[]}
 
     for imovel1,imovel2,proporcao,resultado in lista:
         escolhido = None
-        print(os.getpid(),imovel1)
         if resultado == 1:
             escolhido = iguais
-            csv_file = os.path.join(CSV_PATH,"iguais.csv")
         elif resultado == 3:
             escolhido = diferentes
-            csv_file = os.path.join(CSV_PATH,"diferentes.csv")
         else:
             escolhido = indeterminados
-            csv_file = os.path.join(CSV_PATH,"indeterminados.csv")
         
         escolhido["imovel1"].append(imovel1.split('\\')[-1])
         escolhido["imovel2"].append(imovel2.split('\\')[-1])
         escolhido["proporcao_de_iguais"].append(proporcao[0])
         escolhido["proporcao_de_diferentes"].append(proporcao[2])
         escolhido["proporcao_de_indeterminados"].append(proporcao[1])
-        escolhido = pd.DataFrame(escolhido)
 
     iguais = pd.DataFrame(iguais)
     diferentes = pd.DataFrame(diferentes)
     indeterminados = pd.DataFrame(indeterminados)
-    try: # Ve se csv ja existe
-        df = pd.read_csv(csv_file)
-        iguais.to_csv(os.path.join(CSV_PATH,"iguais.csv"), mode='a', header=False,index=False)
-        diferentes.to_csv(os.path.join(CSV_PATH,"diferentes.csv"), mode='a',header=False,index=False)
-        indeterminados.to_csv(os.path.join(CSV_PATH,"indeterminados.csv"), mode='a',header=False,index=False)
-    except: # Se não existe, cria um novo
-        cria_csv(csv_file,escolhido)
-        df = pd.read_csv(csv_file)
-        iguais.to_csv(os.path.join(CSV_PATH,"iguais.csv"), mode='a',index=False)
-        diferentes.to_csv(os.path.join(CSV_PATH,"diferentes.csv"), mode='a',index=False)
-        indeterminados.to_csv(os.path.join(CSV_PATH,"indeterminados.csv"), mode='a',index=False)
-    
+    print(iguais)
+    csv_iguais = os.path.join(CSV_PATH,"iguais.csv")
+    cria_csv(csv_iguais)
+    iguais.to_csv(csv_iguais, mode='a', index=False, header=False)
 
-    iguais.to_csv(os.path.join(CSV_PATH,"iguais.csv"), mode='a', header=False,index=False)
-    diferentes.to_csv(os.path.join(CSV_PATH,"diferentes.csv"), mode='a',index=False)
-    indeterminados.to_csv(os.path.join(CSV_PATH,"indeterminados.csv"), mode='a',index=False)
+    csv_diferentes = os.path.join(CSV_PATH,"diferentes.csv")
+    cria_csv(csv_diferentes)
+    diferentes.to_csv(csv_diferentes, mode='a', index=False, header=False)
+
+    csv_indeterminados = os.path.join(CSV_PATH,"indeterminados.csv")
+    cria_csv(csv_indeterminados)
+    indeterminados.to_csv(csv_indeterminados, mode='a', index=False, header=False)
+
 
 
 #--------------------------------------------------------------------------------#
