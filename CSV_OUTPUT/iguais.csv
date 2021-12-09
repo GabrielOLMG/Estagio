@@ -1,0 +1,11 @@
+imovel1,imovel2,proporcao_de_iguais,proporcao_de_diferentes,proporcao_de_indeterminados
+im7_2_iguais_ao_4,im4,1.0,0.0,0.0
+im8_5_iguais_ao_4_porem_1_diferente,im4,0.8333333333333334,0.16666666666666663,0.0
+im7_2_iguais_ao_4,im4,1.0,0.0,0.0
+im8_5_iguais_ao_4_porem_1_diferente,im4,0.8333333333333334,0.16666666666666663,0.0
+im7_2_iguais_ao_4,im8_5_iguais_ao_4_porem_1_diferente,1.0,0.0,0.0
+im7_2_iguais_ao_4,im9_5_iguais_ao_4_porem_3_diferente,1.0,0.0,0.0
+im7_2_iguais_ao_4,im8_5_iguais_ao_4_porem_1_diferente,1.0,0.0,0.0
+im7_2_iguais_ao_4,im9_5_iguais_ao_4_porem_3_diferente,1.0,0.0,0.0
+im8_5_iguais_ao_4_porem_1_diferente,im9_5_iguais_ao_4_porem_3_diferente,1.0,0.0,0.0
+im8_5_iguais_ao_4_porem_1_diferente,im9_5_iguais_ao_4_porem_3_diferente,1.0,0.0,0.0

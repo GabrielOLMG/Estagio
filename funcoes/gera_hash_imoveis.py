@@ -12,7 +12,7 @@ import multiprocessing as mp
 from PIL import Image
 from funcoes.auxiliares import *
 from imagededup.methods import PHash, DHash
-
+from funcoes.configuracao import *
 
 def gera_hash_imoveis(CSV_PATH,PATH_FOTOS):
     """
@@ -89,12 +89,22 @@ def encontra_iguais(dhash,phash, imagens,PATH_IMOVEL):
     dhash_dup = dhash_c.find_duplicates(encoding_map = dhash_dic,max_distance_threshold = 6)
     duplicadas = simplificaDuplicadas(dhash_dup)
     para_remover = analisa_duplicadas(duplicadas,PATH_IMOVEL)
-    remove_imagem_duplicada(para_remover)
-    print(f"""
-           #-------------------------------#
-           removidos {len(para_remover)} na pasta {PATH_IMOVEL}
-           #-------------------------------#
-           """)
+    if DELETE: 
+        
+        remove_imagem_duplicada(para_remover)
+        print(f"""
+            #-------------------------------#
+            removidos {len(para_remover)} na pasta {PATH_IMOVEL}
+            #-------------------------------#
+            """)
+    else:
+        print(f"""
+            #-------------------------------#
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            {para_remover}
+            #-------------------------------#
+            """)
         
     
 

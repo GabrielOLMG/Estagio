@@ -1,47 +1,47 @@
-PROCESSO  31860  --->  0 de 1 feito
-
-               relação entre FOTOS\0\im5 com FOTOS\0\im4
-               DIFERENTES 1.0
-               
-PROCESSO  16832  --->  0 de 1 feito
-
-               relação entre FOTOS\0\metade_igual_ao_4_mais_extra com FOTOS\0\im4
-               IGUAIS 0.7777777777777778
-               
-PROCESSO  7384  --->  0 de 1 feito
-
-                relação entre FOTOS\0\metade_igual_ao_4_metade_diferente com FOTOS\0\im4
-                IGUAIS 0.5
-                DIFERENCIADO 0.5
-                prop_igual/prop_dif 1.0
-                
-PROCESSO  31356  --->  0 de 1 feito
-
-                relação entre FOTOS\0\im5 com FOTOS\0\metade_igual_ao_4_mais_extra
-                IGUAIS 0.2857142857142857
-                DIFERENCIADO 0.7142857142857143
-                prop_igual/prop_dif 0.39999999999999997
-                
-PROCESSO  16640  --->  0 de 1 feito
-
-               relação entre FOTOS\0\im5 com FOTOS\0\metade_igual_ao_4_metade_diferente
-               DIFERENTES 1.0
-               
-PROCESSO  18940  --->  0 de 1 feito
-
-                relação entre FOTOS\0\metade_igual_ao_4_mais_extra com FOTOS\0\metade_igual_ao_4_metade_diferente
-                IGUAIS 0.5555555555555556
-                DIFERENCIADO 0.4444444444444444
-                prop_igual/prop_dif 1.2500000000000002
-                
+PROCESSO  19704  --->  0 de 2 feito
+PROCESSO  19704  --->  0 de 1 feito
+PROCESSO  31512  --->  0 de 1 feito
+PROCESSO  9900  --->  0 de 2 feito
+PROCESSO  17612  --->  0 de 1 feito
+PROCESSO  24364  --->  0 de 1 feito
+PROCESSO  24364  --->  0 de 1 feito
+PROCESSO  7772  --->  0 de 2 feito
+PROCESSO  8468  --->  0 de 1 feito
+PROCESSO  12768  --->  0 de 1 feito
+PROCESSO  29448  --->  0 de 1 feito
+PROCESSO  19080  --->  0 de 1 feito
+PROCESSO  17504  --->  0 de 1 feito
+PROCESSO  17504  --->  0 de 1 feito
+PROCESSO  17504  --->  0 de 1 feito
+PROCESSO  34008  --->  0 de 1 feito
+PROCESSO  34008  --->  0 de 1 feito
+PROCESSO  21556  --->  0 de 1 feito
 ---------------------------------------------------------------------------------------------------------------
--------------------------------------------------
--------------------------------------------------
--------------------------------------------------
--------------------------------------------------
--------------------------------------------------
--------------------------------------------------
--------------------------------------------------
--------------------------------------------------
--------------------------------------------------
-<<The time of the run: 7.995225667953491>>
+COLOCA NO CSV [('FOTOS\\0\\im10_3_iguais_ao_4_porem_3_diferentes', 'FOTOS\\0\\im4', (0.5, 0.0, 0.5), 2), ('FOTOS\\0\\im10_3_iguais_ao_4_porem_3_diferentes', 'FOTOS\\0\\im5', (0.0, 0.0, 1.0), 3), ('FOTOS\\0\\im10_3_iguais_ao_4_porem_3_diferentes', 'FOTOS\\0\\im6', (0.0, 0.0, 1.0), 3), ('FOTOS\\0\\im7_2_iguais_ao_4', 'FOTOS\\0\\im10_3_iguais_ao_4_porem_3_diferentes', (0.5, 0.0, 0.5), 2), ('FOTOS\\0\\im10_3_iguais_ao_4_porem_3_diferentes', 'FOTOS\\0\\im8_5_iguais_ao_4_porem_1_diferente', (0.3333333333333333, 0.0, 0.6666666666666667), 2), ('FOTOS\\0\\im10_3_iguais_ao_4_porem_3_diferentes', 'FOTOS\\0\\im9_5_iguais_ao_4_porem_3_diferente', (0.6666666666666666, 0.0, 0.33333333333333337), 2)]
+35156 FOTOS\0\im10_3_iguais_ao_4_porem_3_diferentes
+35156 FOTOS\0\im10_3_iguais_ao_4_porem_3_diferentes
+35156 FOTOS\0\im10_3_iguais_ao_4_porem_3_diferentes
+35156 FOTOS\0\im7_2_iguais_ao_4
+35156 FOTOS\0\im10_3_iguais_ao_4_porem_3_diferentes
+35156 FOTOS\0\im10_3_iguais_ao_4_porem_3_diferentes
+COLOCA NO CSV [('FOTOS\\0\\im5', 'FOTOS\\0\\im4', (0.0, 0.0, 1.0), 3), ('FOTOS\\0\\im6', 'FOTOS\\0\\im4', (0.0, 0.0, 1.0), 3), ('FOTOS\\0\\im7_2_iguais_ao_4', 'FOTOS\\0\\im4', (1.0, 0.0, 0.0), 1), ('FOTOS\\0\\im8_5_iguais_ao_4_porem_1_diferente', 'FOTOS\\0\\im4', (0.8333333333333334, 0.0, 0.16666666666666663), 1), ('FOTOS\\0\\im9_5_iguais_ao_4_porem_3_diferente', 'FOTOS\\0\\im4', (0.625, 0.0, 0.375), 2)]
+35156 FOTOS\0\im5
+35156 FOTOS\0\im6
+35156 FOTOS\0\im7_2_iguais_ao_4
+35156 FOTOS\0\im8_5_iguais_ao_4_porem_1_diferente
+35156 FOTOS\0\im9_5_iguais_ao_4_porem_3_diferente
+COLOCA NO CSV [('FOTOS\\0\\im6', 'FOTOS\\0\\im5', (0.0, 0.0, 1.0), 3), ('FOTOS\\0\\im7_2_iguais_ao_4', 'FOTOS\\0\\im5', (0.0, 0.0, 1.0), 3), ('FOTOS\\0\\im8_5_iguais_ao_4_porem_1_diferente', 'FOTOS\\0\\im5', (0.0, 0.0, 1.0), 3), ('FOTOS\\0\\im5', 'FOTOS\\0\\im9_5_iguais_ao_4_porem_3_diferente', (0.0, 0.0, 1.0), 3)]
+35156 FOTOS\0\im6
+35156 FOTOS\0\im7_2_iguais_ao_4
+35156 FOTOS\0\im8_5_iguais_ao_4_porem_1_diferente
+35156 FOTOS\0\im5
+COLOCA NO CSV [('FOTOS\\0\\im7_2_iguais_ao_4', 'FOTOS\\0\\im6', (0.0, 0.0, 1.0), 3), ('FOTOS\\0\\im6', 'FOTOS\\0\\im8_5_iguais_ao_4_porem_1_diferente', (0.0, 0.0, 1.0), 3), ('FOTOS\\0\\im6', 'FOTOS\\0\\im9_5_iguais_ao_4_porem_3_diferente', (0.0, 0.0, 1.0), 3)]
+35156 FOTOS\0\im7_2_iguais_ao_4
+35156 FOTOS\0\im6
+35156 FOTOS\0\im6
+COLOCA NO CSV [('FOTOS\\0\\im7_2_iguais_ao_4', 'FOTOS\\0\\im8_5_iguais_ao_4_porem_1_diferente', (1.0, 0.0, 0.0), 1), ('FOTOS\\0\\im7_2_iguais_ao_4', 'FOTOS\\0\\im9_5_iguais_ao_4_porem_3_diferente', (1.0, 0.0, 0.0), 1)]
+35156 FOTOS\0\im7_2_iguais_ao_4
+35156 FOTOS\0\im7_2_iguais_ao_4
+COLOCA NO CSV [('FOTOS\\0\\im8_5_iguais_ao_4_porem_1_diferente', 'FOTOS\\0\\im9_5_iguais_ao_4_porem_3_diferente', (1.0, 0.0, 0.0), 1)]
+35156 FOTOS\0\im8_5_iguais_ao_4_porem_1_diferente
+<<The time of the run: 15.751502275466919>>

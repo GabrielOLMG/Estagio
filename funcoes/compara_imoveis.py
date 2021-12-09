@@ -3,11 +3,10 @@ import os
 import numpy as np
 import pandas as pd
 import multiprocessing as mp
-
+from multiprocessing import Process, Manager, Pool
 from funcoes.auxiliares import *
 
-DHASH_MAX = 12
-DHASH_MIN = 6
+from funcoes.configuracao import *
 
 def compara_imoveis(CSV_PATH,FOTOS_PATH,CSV_PATH_OUTPUT):
     percorre_imoveis(CSV_PATH,FOTOS_PATH,CSV_PATH_OUTPUT)
@@ -18,58 +17,62 @@ def percorre_imoveis(CSV_PATH,FOTOS_PATH,CSV_PATH_OUTPUT):
     """
     df = pd.read_csv(CSV_PATH)
     info = list(zip(df["ecd"],df["cfr"]))
-    indeterminados = [] # [[img1,img2],...]
-    iguais = []         # [[img1,img2],...]
-    diferentes = []     # [img1,...]
     for i in range(len(info)-1):
-        print(f"""-------------------------------------------------""")    
-        print(f"""-------------------------------------------------""")    
-        print(f"""-------------------------------------------------""")  
         imovel_atual = info[i]
+        # print(imovel_atual)
         resto = info[i+1:]
-        processos = cria_processos(imovel_atual,resto,FOTOS_PATH)
-        inicia_processos(processos)
-        # break
-        
-def cria_processos(imovel_atual,lista_imoveis,FOTOS_PATH):
+        cria_processos(imovel_atual,resto,FOTOS_PATH,CSV_PATH_OUTPUT)
+
+    # print(respostas)
+
+
+
+def cria_processos(imovel_atual,lista_imoveis,FOTOS_PATH,CSV_PATH_OUTPUT):
     manager = mp.Manager()
     return_dict = manager.dict()
+    imoveis_split = np.array_split(lista_imoveis,N_PROCESSOS)
+    # lista_processos = []
+    inputs_list = gera_inputs_pool(imovel_atual,imoveis_split,FOTOS_PATH)
+    with Pool(processes=N_PROCESSOS) as pool:
+        valores = pool.starmap(percorre_e_compara,inputs_list)
 
-    n_processos = mp.cpu_count()//4 
+    # atualiza_csv(CSV_PATH_OUTPUT,list(return_dict.values())
+    flat_list = [item for sublist in valores for item in sublist]
+    atualiza_csv(CSV_PATH_OUTPUT,flat_list) 
+    # for i in range(N_PROCESSOS):
+    #     processo = mp.Process(target=percorre_e_compara, args=(i,imovel_atual,imoveis_split[i],FOTOS_PATH,return_dict))
+    #     lista_processos.append(processo)
 
-    imoveis_split = np.array_split(lista_imoveis,n_processos)
-    lista_processos = []
-    
-    for i in range(n_processos):
-        processo = mp.Process(target=percorre_e_compara, args=(imovel_atual,imoveis_split[i],FOTOS_PATH,return_dict))
-        lista_processos.append(processo)
+    # for processo in lista_processos:
+    #     processo.start()
 
-    return lista_processos     
+    # for processo in lista_processos:
+    #     processo.join()
+
+    # atualiza_csv(CSV_PATH_OUTPUT,list(return_dict.values()))  
         
-def inicia_processos(processos):
-    for processo in processos:
-        processo.start()
+    
 
-    for processo in processos:
-        processo.join()
-
-def percorre_e_compara(imovel_atual, imoveis,FOTOS_PATH,return_dict):
+def percorre_e_compara(imovel_atual, imoveis,FOTOS_PATH):
 
     path_atual = os.path.join(FOTOS_PATH,os.path.join(str(imovel_atual[0]),str(imovel_atual[1])))
     img_imovel_atual = os.listdir(path_atual)
+    resultados = []
     for i,imovel_a_comparar in enumerate(imoveis):
         if i%50 == 0: 
             print('PROCESSO ',os.getpid(),' ---> ', i, 'de', len(imoveis), 'feito')
 
         path_comparar = os.path.join(FOTOS_PATH, os.path.join(str(imovel_a_comparar[0]),str(imovel_a_comparar[1])))
         img_imovel_a_comparar = os.listdir(path_comparar)
-        verifica_igualdade(path_atual,img_imovel_atual,path_comparar,img_imovel_a_comparar)
+        resultado = verifica_igualdade(path_atual,img_imovel_atual,path_comparar,img_imovel_a_comparar)
+        resultados.append(resultado)
+    
+    return resultados
 
 
 def verifica_igualdade(path_imovel_atual,img_imovel_atual,path_imovel_a_comparar,img_imovel_a_comparar):
     iguais = 0
     indeterminado = 0
-    diferentes = 0
     
     '''
         Se eu estou olhando para A e A esta contido em B, 
@@ -99,62 +102,29 @@ def verifica_igualdade(path_imovel_atual,img_imovel_atual,path_imovel_a_comparar
                 iguais+=1
             elif valor == 2:
                 indeterminado+=1
-            else:
-                diferentes+=1 
 
-    classifica_imoveis(iguais,indeterminado,len(menor[1]),menor[0],maior[0])
-    # print(f"""
-    #     ------------------------------------------------
-    #     comparando '{menor[0]}' com '{maior[0]}'
-    #     <<<iguais = {iguais} diferentes = {diferentes} indeterminados = {indeterminado} tamanho_atual = {len(menor[1])} tamanho_a_comparar = {len(maior[1])}>>> 
-    #     igual/imovel_atual  = {(iguais)/len(menor[1])}
-    #     indeterminado/imovel_atual  = {(indeterminado)/len(menor[1])}
-    #     -------------------------------------------------
-    #     """)
+    return classifica_imoveis(iguais,indeterminado,len(menor[1]),menor[0],maior[0])
     
 
 def classifica_imoveis(iguais,indeterminado,tamanho_imovel_atual,path_imovel_atual,path_imovel_a_comparar):
     prop_igual = (iguais)/tamanho_imovel_atual
     prop_ind = (indeterminado)/tamanho_imovel_atual
-    prop_dif = 1 - (prop_igual + prop_ind)
-    if prop_dif >= 0.75:
-        print(f"""
-               relação entre {path_imovel_atual} com {path_imovel_a_comparar}
-               DIFERENTES {prop_dif}
-               """)
-    elif prop_igual >= 0.75:
-        print(f"""
-               relação entre {path_imovel_atual} com {path_imovel_a_comparar}
-               IGUAIS {prop_igual}
-               """)
-    elif prop_ind >= 0.75:
-        print(f"""
-               relação entre {path_imovel_atual} com {path_imovel_a_comparar}
-               INDETERMINADO {prop_ind}
-               """)
+    diferentes,prop_dif = (tamanho_imovel_atual - iguais - indeterminado,1 - (prop_igual + prop_ind))
+    todas_proporcoes = (prop_igual,prop_ind,prop_dif)
+    if prop_igual >= PROPORCAO_IGUAIS and diferentes <= DIFERENCA_MAXIMA:
+        return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, 1)
+        # print(f"[Iguais] com uma proporcao de {prop_igual} {path_imovel_atual} -> {path_imovel_a_comparar} \n")
+    elif prop_dif >= PROPORCAO_DIFERENTES:
+        return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, 3)
+        # print(f"[Diferentes] com uma proporcao de {prop_dif} {path_imovel_atual} -> {path_imovel_a_comparar} \n")
+    elif (prop_igual <= PROPORCAO_IGUAIS and iguais >=1) or (prop_ind >= PROPORCAO_INDETERMINADOS):
+        return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, 2)
+        # print(f"[Ver Manualmente] PI ={prop_igual} PInd = {prop_ind} PD = {prop_dif} {path_imovel_atual} -> {path_imovel_a_comparar} \n")
     else:
-        if prop_ind == 0:
-            print(f"""
-                relação entre {path_imovel_atual} com {path_imovel_a_comparar}
-                IGUAIS {prop_igual}
-                DIFERENCIADO {prop_dif}
-                prop_igual/prop_dif {prop_igual/prop_dif}
-                """)
-            
-        elif prop_igual == 0:
-            print(f"""
-                relação entre {path_imovel_atual} com {path_imovel_a_comparar}
-                INDETERMINADO {prop_ind}
-                DIFERENCIADO {prop_dif}
-                prop_ind/prop_dif {prop_ind/prop_dif}
-                """)
-        elif prop_dif == 0:
-            print(f"""
-                relação entre {path_imovel_atual} com {path_imovel_a_comparar}
-                IGUAIS {prop_igual}
-                INDETERMINADO {prop_ind}
-                prop_igual/prop_ind {prop_igual/prop_ind}
-                """)
+        return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, -1)
+        # print("ALGUM CASO QUE NÃO ESTOU VENDO!!!!!!!!!!!!!!!!!!!!!!!!")
+    
+    
    
 
 
