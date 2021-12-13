@@ -11,7 +11,7 @@ def percorre_pastas(PATH, CSV_PATH):
     paths_todos = []
     pasta_todos = []
     for pasta in pastas:
-        if(pasta == "0"): continue
+        # if(pasta == "0"): continue
         path_pasta = os.path.join(PATH, pasta)
         nomes,paths = percorre_imoveis(path_pasta)
         nomes_todos.extend(nomes)

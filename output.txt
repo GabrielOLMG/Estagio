@@ -1,109 +1,195 @@
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\a_a_original
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            []
             #-------------------------------#
             
-32980  --->  0 - 4
+13132  --->  0 - 4
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\ex1
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            []
             #-------------------------------#
             
-14296  --->  0 - 4
+10012  --->  0 - 4
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\im3
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            []
             #-------------------------------#
             
-18032  --->  0 - 4
+10740  --->  0 - 5
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\imovel1
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            []
             #-------------------------------#
             
-19600  --->  0 - 4
+31012  --->  0 - 5
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\a_copia
-            #-------------------------------#
-            
-
-            #-------------------------------#
-            removidos 0 na pasta FOTOS\1\ex1_ind
-            #-------------------------------#
-            
-
-            #-------------------------------#
-            removidos 0 na pasta FOTOS\1\predio_castelhana
-            #-------------------------------#
-            
-
-            #-------------------------------#
-            removidos 0 na pasta FOTOS\1\im4
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            ['FOTOS\\219\\6dfc9b7235c843e1974d6e6713c22c9c\\79a76496de999fbab6c048510a8147fb.jpg', 'FOTOS\\219\\6dfc9b7235c843e1974d6e6713c22c9c\\63a61c828b0221606702c3c47c638621.jpg']
             #-------------------------------#
             
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\a_copia2
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            []
             #-------------------------------#
             
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\im1
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            ['FOTOS\\219\\43e6bd29179e23eeb013ce613a965a4b\\ba6c968e465664ca31f1d2aace522009.jpg', 'FOTOS\\219\\43e6bd29179e23eeb013ce613a965a4b\\ae90b7f9d83c528556b61a67f8a4744e.jpg', 'FOTOS\\219\\43e6bd29179e23eeb013ce613a965a4b\\3fadbca0c438d783da281c0f2898de82.jpg', 'FOTOS\\219\\43e6bd29179e23eeb013ce613a965a4b\\7490f46a6d4affa6cf09d00ea12cc9d0.jpg', 'FOTOS\\219\\43e6bd29179e23eeb013ce613a965a4b\\82105fa05d5cff90f6f77d16844aa4f9.jpg', 'FOTOS\\219\\43e6bd29179e23eeb013ce613a965a4b\\d54f01005cc7e19d2a969ff4e6dcd238.jpg']
             #-------------------------------#
             
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\predio_remax
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            ['FOTOS\\219\\b61bbd51bf6bcbfedf390ff82d6a3d59\\164f4ee749c71d83e25ed3bdd2cebb60.jpg', 'FOTOS\\219\\b61bbd51bf6bcbfedf390ff82d6a3d59\\8d7cb4077017969363ec2531069277e2.jpg']
             #-------------------------------#
             
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\im5
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            []
             #-------------------------------#
             
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\com_reptido
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            []
             #-------------------------------#
             
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\im2
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            []
             #-------------------------------#
             
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\tamanho_diferente
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            []
             #-------------------------------#
             
 
             #-------------------------------#
-            removidos 0 na pasta FOTOS\1\im6=im5
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            ['FOTOS\\219\\fede3263d321c9a38c85de31d8ba4d78\\0004e5cc74fe3ac9068f47ce32ffd7e1.jpg', 'FOTOS\\219\\fede3263d321c9a38c85de31d8ba4d78\\209edd122375f0688a11171da21926f9.jpg', 'FOTOS\\219\\fede3263d321c9a38c85de31d8ba4d78\\309f12513c3095449f86f870c762a2b1.jpg', 'FOTOS\\219\\fede3263d321c9a38c85de31d8ba4d78\\44d532fbb24019a5ed1d5a039ca61838.jpg', 'FOTOS\\219\\fede3263d321c9a38c85de31d8ba4d78\\5d8d8ff5ad6f2ba7978771376b03b52d.jpg', 'FOTOS\\219\\fede3263d321c9a38c85de31d8ba4d78\\f7b33a323ca03f60adc1964cf37c90a1.jpg', 'FOTOS\\219\\fede3263d321c9a38c85de31d8ba4d78\\d72ee927cf7cb691d5877c7b258d87ed.jpg', 'FOTOS\\219\\fede3263d321c9a38c85de31d8ba4d78\\97ed9ff40e362cf6c140d965073f908b.jpg', 'FOTOS\\219\\fede3263d321c9a38c85de31d8ba4d78\\b0851fd61ea457585ae87110bccf43b6.jpg', 'FOTOS\\219\\fede3263d321c9a38c85de31d8ba4d78\\d28418de49575e3a456d0aafd7cb35a3.jpg']
             #-------------------------------#
             
-PROCESSO  9272  --->  0 de 3 feito
-PROCESSO  11512  --->  0 de 4 feito
-PROCESSO  25932  --->  0 de 4 feito
-PROCESSO  16864  --->  0 de 4 feito
-PROCESSO  25868  --->  0 de 3 feito
-PROCESSO  21080  --->  0 de 3 feito
-PROCESSO  10472  --->  0 de 4 feito
-PROCESSO  15900  --->  0 de 4 feito
-PROCESSO  8272  --->  0 de 3 feito
-PROCESSO  15276  --->  0 de 3 feito
-PROCESSO  25516  --->  0 de 3 feito
-PROCESSO  32640  --->  0 de 4 feito
-PROCESSO  25812  --->  0 de 3 feito
-PROCESSO  16576  --->  0 de 3 feito
-PROCESSO  6500  --->  0 de 3 feito
-PROCESSO  2956  --->  0 de 3 feito
-PROCESSO  30428  --->  0 de 2 feito
-PROCESSO  13320  --->  0 de 3 feito
-PROCESSO  1148  --->  0 de 3 feito
-PROCESSO  1072  --->  0 de 3 feito
-PROCESSO  3860  --->  0 de 2 feito
-PROCESSO  12272  --->  0 de 3 feito
-PROCESSO  28588  --->  0 de 2 feito
-PROCESSO  32588  --->  0 de 3 feito
+
+            #-------------------------------#
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            ['FOTOS\\219\\dc3f0e6e31aa3ca4abb750135393284b\\2dc8a30348db496650be9c579311d638.jpg']
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            ['FOTOS\\219\\3effa53cdd76e4980d42df659b0f8676\\a08f8bd844be7ca48c101feb7abba6b5.jpg', 'FOTOS\\219\\3effa53cdd76e4980d42df659b0f8676\\21eea3898d343ba57ff6ec8ac808bac0.jpg', 'FOTOS\\219\\3effa53cdd76e4980d42df659b0f8676\\fc5be2c3ecc0d6e0226c49da704023dc.jpg', 'FOTOS\\219\\3effa53cdd76e4980d42df659b0f8676\\f00560de5415b37c91b636bdf6e02741.jpg', 'FOTOS\\219\\3effa53cdd76e4980d42df659b0f8676\\c413a62b2c5542d3aecc1c4adedf1def.jpg']
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            ['FOTOS\\219\\b3222585166194a3932539cc4115aee4\\08969429e35e66b5e357fed8e084ffbb.jpg', 'FOTOS\\219\\b3222585166194a3932539cc4115aee4\\c4b91e9cd5d4ab9460ebc0cc31559236.jpg', 'FOTOS\\219\\b3222585166194a3932539cc4115aee4\\220bc5062e0914c545b0cb21a8690001.jpg', 'FOTOS\\219\\b3222585166194a3932539cc4115aee4\\f3ec0b5fa9475964e9204fd3eef239e6.jpg', 'FOTOS\\219\\b3222585166194a3932539cc4115aee4\\d7966bbdd3d12274caef303bc2b8e450.jpg', 'FOTOS\\219\\b3222585166194a3932539cc4115aee4\\31ab257cfcb7c46bde8a997f61b5a49c.jpg', 'FOTOS\\219\\b3222585166194a3932539cc4115aee4\\d50d49fa6a7186823f8e7fdb282dbaa9.jpg', 'FOTOS\\219\\b3222585166194a3932539cc4115aee4\\666dfca9463944ac1eaea6925d04f51a.jpg', 'FOTOS\\219\\b3222585166194a3932539cc4115aee4\\e32d87f446e86d6aacf2a4fd0aeaee2b.jpg', 'FOTOS\\219\\b3222585166194a3932539cc4115aee4\\5d9aab99bd8e4a067cc8e1f5164d9c4e.jpg', 'FOTOS\\219\\b3222585166194a3932539cc4115aee4\\c4bae1ac3bd992c07e27e75440220896.jpg', 'FOTOS\\219\\b3222585166194a3932539cc4115aee4\\fcfe5236bd20f165daa6d383e3797ff8.jpg']
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            []
+            #-------------------------------#
+            
+
+            #-------------------------------#
+            ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
+            AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
+            ['FOTOS\\219\\029bf2c4fcee5c3b08598373a1043741\\49ddb56c0dbda2904a44624aa674ca41.jpg', 'FOTOS\\219\\029bf2c4fcee5c3b08598373a1043741\\361a9e3f0d4d517e143bd2a56744a995.jpg', 'FOTOS\\219\\029bf2c4fcee5c3b08598373a1043741\\3dd36e782e3c7e305ba223cbff1a1135.jpg', 'FOTOS\\219\\029bf2c4fcee5c3b08598373a1043741\\c7f9e542eff7aee20cd401384208c976.jpg']
+            #-------------------------------#
+            
+PROCESSO  35676  --->  0 de 4 feito
+PROCESSO  3236  --->  0 de 4 feito
+PROCESSO  13104  --->  0 de 5 feito
+PROCESSO  28208  --->  0 de 4 feito
+PROCESSO  5300  --->  0 de 4 feito
+PROCESSO  15956  --->  0 de 4 feito
+PROCESSO  20928  --->  0 de 4 feito
+PROCESSO  9388  --->  0 de 4 feito
+PROCESSO  9900  --->  0 de 3 feito
+PROCESSO  16596  --->  0 de 4 feito
+PROCESSO  23628  --->  0 de 4 feito
+PROCESSO  8060  --->  0 de 4 feito
+PROCESSO  12680  --->  0 de 3 feito
+PROCESSO  576  --->  0 de 3 feito
+PROCESSO  23220  --->  0 de 4 feito
+PROCESSO  15524  --->  0 de 4 feito
+PROCESSO  8212  --->  0 de 3 feito
+PROCESSO  10044  --->  0 de 3 feito
+PROCESSO  21344  --->  0 de 3 feito
+PROCESSO  27656  --->  0 de 4 feito
+PROCESSO  5916  --->  0 de 3 feito
+PROCESSO  12936  --->  0 de 3 feito
+PROCESSO  6984  --->  0 de 3 feito
+PROCESSO  26508  --->  0 de 3 feito
+PROCESSO  10620  --->  0 de 3 feito
+PROCESSO  34016  --->  0 de 2 feito
+PROCESSO  9520  --->  0 de 3 feito
+PROCESSO  26896  --->  0 de 3 feito
+PROCESSO  7780  --->  0 de 2 feito
+PROCESSO  24632  --->  0 de 2 feito
+PROCESSO  30188  --->  0 de 3 feito
+PROCESSO  19316  --->  0 de 3 feito
+PROCESSO  34096  --->  0 de 2 feito
+PROCESSO  16136  --->  0 de 2 feito
+PROCESSO  26504  --->  0 de 2 feito
+PROCESSO  17744  --->  0 de 3 feito
+PROCESSO  16328  --->  0 de 2 feito
+PROCESSO  24296  --->  0 de 2 feito
+PROCESSO  30416  --->  0 de 2 feito
+PROCESSO  18520  --->  0 de 2 feito
+PROCESSO  15432  --->  0 de 2 feito
+PROCESSO  15432  --->  0 de 2 feito
+PROCESSO  34092  --->  0 de 1 feito
+PROCESSO  1528  --->  0 de 2 feito
+PROCESSO  29016  --->  0 de 1 feito
+PROCESSO  27316  --->  0 de 2 feito
+PROCESSO  13944  --->  0 de 1 feito
+PROCESSO  30284  --->  0 de 2 feito
+PROCESSO  10356  --->  0 de 1 feito
+PROCESSO  22008  --->  0 de 1 feito
+PROCESSO  20892  --->  0 de 1 feito
+PROCESSO  33252  --->  0 de 2 feito
+PROCESSO  3944  --->  0 de 1 feito
+PROCESSO  8072  --->  0 de 1 feito
+PROCESSO  17836  --->  0 de 1 feito
+PROCESSO  22492  --->  0 de 1 feito
+PROCESSO  33544  --->  0 de 1 feito
+PROCESSO  14360  --->  0 de 1 feito
+PROCESSO  19204  --->  0 de 1 feito
+PROCESSO  31648  --->  0 de 1 feito
+PROCESSO  19556  --->  0 de 1 feito
+PROCESSO  24844  --->  0 de 1 feito
+<<The time of the run: 50.191972970962524>>
 ---------------------------------------------------------------------------------------------------------------
+<<The time of the run: 29.415796995162964>>

@@ -3,9 +3,40 @@ import multiprocessing as mp
 #------------------------------gera_hash_imoveis.py------------------------------#   
 #--------------------------------------------------------------------------------#
 
+# Cada camada ira filtrar o csv cada vez mais, onde a camada 1 é a mais generica,
+# com menos chance de ter tido erro ao gear o csv e a camada 3 é a mais especifica,
+# com possiveis erros no csv. 
+
+# Camada 1:
+#  - tipo
+#  - classe_energetica_id
+#  - garagem
+#  - terraco
+#  - piscina
+#  - terreno    
+CAMADA1 = True
+# Camada 2:
+#  - 'data_public'-abp
+#       ->Porcentagem abaixo e acima que podemos considerar uma area realtivamente perto uma da outra.
+#       ->(1 - INTERVALO_AREA) é a menor area aceitavel 
+#       ->(1 + INTERVALO_AREA) é a maior area aceitavel
+CAMADA2 = True
+INTERVALO_AREA = 0.25
+# Camada 3: 
+#     -  tipologia  
+#     -  freguesia_id
+#     -  regiao_id  
+CAMADA3 = True
+
+
+
+#--------------------------------------------------------------------------------#
+#------------------------------gera_hash_imoveis.py------------------------------#   
+#--------------------------------------------------------------------------------#
+
 # Permitir que delete arquivos de imagens repetidas dentro de um imovel? 
 # Ao desativar esta opção, apenas sera feito o calculo das hash para cada imagem
-DELETE = True
+DELETE = False
 
 #--------------------------------------------------------------------------------#
 #-------------------------------compara_imoveis.py-------------------------------#   
