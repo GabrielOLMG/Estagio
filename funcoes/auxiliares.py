@@ -10,12 +10,17 @@ def getList(elemento, duplicadas,vistos):
     if elemento in vistos:
         '''caso base'''
         return [] 
-    lista_atual = duplicadas[elemento]
+    try:    
+        lista_atual = duplicadas[elemento]
+    except:
+        lista_atual = []
     atual = [elemento]
     vistos.append(elemento)
     
     for elementoN in lista_atual:
-        atual.extend(getList(elementoN,duplicadas,vistos))
+        l = getList(elementoN,duplicadas,vistos)
+        
+        atual.extend(l)
 
     return atual
     
@@ -132,8 +137,15 @@ def atualiza_csv(CSV_PATH, lista):
 
 #--------------------------------------------------------------------------------#
 
-def gera_inputs_pool(imovel_atual,imoveis_split, FOTOS_PATH):
+def gera_inputs_pool_imovel(imovel_atual,imoveis_split, FOTOS_PATH):
     input_ = []
     for i in range(len(imoveis_split)):
         input_.append((imovel_atual,imoveis_split[i],FOTOS_PATH))
+    return input_
+
+
+def gera_inputs_pool_csv(ids_split,df):
+    input_ = []
+    for i in range(len(ids_split)):
+        input_.append((ids_split[i],df))
     return input_

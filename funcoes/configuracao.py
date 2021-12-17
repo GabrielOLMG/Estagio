@@ -2,6 +2,7 @@ import multiprocessing as mp
 #--------------------------------------------------------------------------------#
 #------------------------------gera_hash_imoveis.py------------------------------#   
 #--------------------------------------------------------------------------------#
+N_PROCESSOS_CSV = mp.cpu_count() //4
 
 # Cada camada ira filtrar o csv cada vez mais, onde a camada 1 é a mais generica,
 # com menos chance de ter tido erro ao gear o csv e a camada 3 é a mais especifica,

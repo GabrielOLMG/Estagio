@@ -23,8 +23,7 @@ def percorre_imoveis(CSV_PATH,FOTOS_PATH,CSV_PATH_OUTPUT):
 
 def cria_processos(imovel_atual,lista_imoveis,FOTOS_PATH,CSV_PATH_OUTPUT):
     imoveis_split = np.array_split(lista_imoveis,N_PROCESSOS)
-    # lista_processos = []
-    inputs_list = gera_inputs_pool(imovel_atual,imoveis_split,FOTOS_PATH)
+    inputs_list = gera_inputs_pool_imovel(imovel_atual,imoveis_split,FOTOS_PATH)
     with Pool(processes=N_PROCESSOS) as pool:
         valores = pool.starmap(percorre_e_compara,inputs_list)
     flat_list = [item for sublist in valores for item in sublist]
