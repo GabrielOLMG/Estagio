@@ -137,6 +137,8 @@ def atualiza_csv(CSV_PATH, lista):
 
 #--------------------------------------------------------------------------------#
 
+
+
 def gera_inputs_pool_imovel(imoveis_split, FOTOS_PATH):
     input_ = []
     for i in range(len(imoveis_split)):

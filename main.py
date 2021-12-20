@@ -2,16 +2,19 @@
 import time
 from funcoes.acha_duplicadas_csv import acha_duplicadas_csv
 from funcoes.gera_hash_todos_imoveis import gera_hash_todos_imoveis
+from funcoes.gera_hash_possiveis_iguais import gera_hash_possiveis_iguais
 from funcoes.compara_imoveis import compara_imoveis
 
 
 
 if __name__ == "__main__":
+    CSV_PATH_METADADO_TESTE = "CSV_FILES\\teste.csv"
+    CSV_PATH_TESTE = "CSV_POSSIVEIS_IGUAIS\possiveis_iguais.csv"
+
     PATH_FOTOS = "FOTOS"
     CSV_PATH_METADADO = "CSV_FILES\dados_gabriel.csv"
-    CSV_PATH_METADADO_TESTE = "CSV_FILES\\teste2.csv"
-    CSV_PATH_TESTE = "CSV_OUTPUT\possiveis_iguais.csv"
     CSV_PATH_OUTPUT = "CSV_OUTPUT/"
+    CSV_PATH_POSSIVEIS_IGUAIS = "CSV_POSSIVEIS_IGUAIS/"
 
     
     '''
@@ -19,7 +22,7 @@ if __name__ == "__main__":
         - Dado o csv com o metadata dos imoveis, irei criar um novo csv contendo as imagens iguais
     '''
     # start = time.time()
-    # acha_duplicadas_csv(CSV_PATH_METADADO_TESTE,CSV_PATH_OUTPUT)
+    # acha_duplicadas_csv(CSV_PATH_METADADO_TESTE,CSV_PATH_POSSIVEIS_IGUAIS)
     # stop = time.time()
     # print(f"<<The time of the run: {stop - start}>>")
 
@@ -33,7 +36,14 @@ if __name__ == "__main__":
     # stop = time.time()
     # print(f"<<The time of the run: {stop - start}>>")
 
-    print("---------------------------------------------------------------------------------------------------------------")
+    # ou
+
+    # start = time.time()
+    # gera_hash_possiveis_iguais(CSV_PATH_TESTE,PATH_FOTOS)
+    # stop = time.time()
+    # print(f"<<The time of the run: {stop - start}>>")
+
+    # print("---------------------------------------------------------------------------------------------------------------")
     '''
     # Passo 3 - Compara imoveis
         - compara imovel com imove

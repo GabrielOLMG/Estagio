@@ -1,6 +1,3 @@
-'''
-    TODAS AS FUNÇÕES USADAS PARA GERAR OS HASH DE CADA IMAGEM NAS NOS IMOVEIS
-'''
 import os
 import json
 import piexif
@@ -32,10 +29,9 @@ def percorre_pastas(CSV_PATH,PATH_FOTOS):
     inicia_processos(processos)
 
 def cria_processos(LIST_PATH_IMOVEIS,PATH_FOTOS):
-    n_processos = mp.cpu_count()//4 
-    imoveis_split = np.array_split(LIST_PATH_IMOVEIS,n_processos)
+    imoveis_split = np.array_split(LIST_PATH_IMOVEIS,N_PROCESSOS)
     lista_p = []
-    for i in range(n_processos):
+    for i in range(N_PROCESSOS):
         processo = mp.Process(target=percorre_imoveis, args=(imoveis_split[i],PATH_FOTOS))
         lista_p.append(processo)
     
@@ -103,7 +99,7 @@ def encontra_iguais(dhash,phash, imagens,PATH_IMOVEL):
             #-------------------------------#
             ATIVE A VARIAVEL DELETE PARA REALMENTE APAGAR AS IMAGENS REPETIDAS.
             AS SEGUINTES IMAGENS DEVERIAM SER DELETADAS:
-            {para_remover}
+            {para_remover} na pasta {PATH_IMOVEL}
             #-------------------------------#
             """)
         
@@ -154,5 +150,20 @@ def add_metadata(PATH_IMAGEM, HASH_IMAGEM):
         exif_dict["Exif"][piexif.ExifIFD.UserComment] = piexif.helper.UserComment.dump(json.dumps(HASH_IMAGEM), encoding="unicode")
         piexif.insert(piexif.dump(exif_dict),PATH_IMAGEM)
     except:
-        print("PNG ERRO",PATH_IMAGEM)
+        # piexif não suporta PNG, então vou passar de PNG para JPG
+        imagem = Image.open(PATH_IMAGEM)
+        imagemRGB = imagem.convert('RGB')
+        novo_nome = PATH_IMAGEM.split('.')[0] + '.jpg'
+        os.remove(PATH_IMAGEM) # remove a imagem antiga
+        imagemRGB.save(novo_nome)
+        
+        try: 
+            exif_dict = piexif.load(novo_nome)
+            exif_dict["Exif"][piexif.ExifIFD.UserComment] = piexif.helper.UserComment.dump(json.dumps(HASH_IMAGEM), encoding="unicode")
+            piexif.insert(piexif.dump(exif_dict),novo_nome)
+        except:
+            print(f"ERRO Novo Nome = {novo_nome} Antigo Nome = {PATH_IMAGEM}")
+            #volta a como estava antes
+            os.remove(novo_nome)
+            imagem.save(PATH_IMAGEM)
 

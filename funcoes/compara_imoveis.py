@@ -29,10 +29,12 @@ def cria_processos(info,FOTOS_PATH,CSV_PATH_OUTPUT):
 
 def percorre_candidados_iguais(lista_para_comparar,FOTOS_PATH):
     resultados = []
-    for comparaval in lista_para_comparar:
-        para_comparar = ast.literal_eval(comparaval[1]) + [comparaval[0]]
+    for i,comparavel in enumerate(lista_para_comparar):
+        para_comparar = ast.literal_eval(comparavel[1]) + [comparavel[0]]
         resultado = compara_possiveis_iguais(para_comparar,FOTOS_PATH)
         resultados.extend(resultado)
+        if i%50 == 0: 
+            print(os.getpid(),' ---> ', i, '-', len(lista_para_comparar))
     return resultados
 
 
@@ -49,6 +51,7 @@ def compara_possiveis_iguais(lista_para_comparar,FOTOS_PATH):
             img_imovel2 = os.listdir(path_imovel2)
             resultado = verifica_igualdade(path_imovel1,img_imovel1,path_imovel2,img_imovel2)
             resultados.append(resultado)
+            
     
     
     
@@ -68,11 +71,20 @@ def verifica_igualdade(path_imovel_atual,img_imovel_atual,path_imovel_a_comparar
 
     for img_atual in menor[1]:
         for img_comparar in maior[1]:
+            
             path_img_atual = os.path.join(menor[0],img_atual)
             path_img_comparar = os.path.join(maior[0],img_comparar)
-            
-            dhash_atual = le_metadata(path_img_atual)["dhash"]
-            dhash_comparar = le_metadata(path_img_comparar)["dhash"]
+            try:
+                dhash_atual = le_metadata(path_img_atual)["dhash"]
+            except:
+                print("Erro ao ler a imagem ",path_img_atual)
+                continue
+            try:
+                dhash_comparar = le_metadata(path_img_comparar)["dhash"]
+            except:
+                print("Erro ao ler a imagem ",path_img_comparar)
+                continue
+
             distancia_hash = hamming_distance(dhash_atual,dhash_comparar)
 
             valor = define_intervalo(distancia_hash, "dhash")
