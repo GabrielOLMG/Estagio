@@ -1,7 +1,7 @@
 
 import time
 from funcoes.acha_duplicadas_csv import acha_duplicadas_csv
-from funcoes.gera_hash_imoveis import gera_hash_imoveis
+from funcoes.gera_hash_todos_imoveis import gera_hash_todos_imoveis
 from funcoes.compara_imoveis import compara_imoveis
 
 
@@ -29,7 +29,7 @@ if __name__ == "__main__":
         - verifica se  tem imagem repetida dentro e deleta as que estão repetidas()
     '''
     # start = time.time()
-    # gera_hash_imoveis(CSV_PATH_METADADO,PATH_FOTOS) # ja feito
+    # gera_hash_todos_imoveis(CSV_PATH_METADADO,PATH_FOTOS) # ja feito
     # stop = time.time()
     # print(f"<<The time of the run: {stop - start}>>")
 

@@ -14,8 +14,9 @@ from funcoes.auxiliares import *
 from imagededup.methods import PHash, DHash
 from funcoes.configuracao import *
 
-def gera_hash_imoveis(CSV_PATH,PATH_FOTOS):
+def gera_hash_todos_imoveis(CSV_PATH,PATH_FOTOS):
     """
+        Gera Hash para todos os imoveis e apaga as imagens repetidas dentro de cada imovel
         DOCUMENTAR
     """
 
