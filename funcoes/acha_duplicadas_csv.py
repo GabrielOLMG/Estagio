@@ -2,16 +2,28 @@ import os
 import json
 import numpy as np
 import pandas as pd
-
+import json
 from multiprocessing import Pool
+
+from pandas.core.frame import DataFrame
 from funcoes.auxiliares import simplificaDuplicadas, gera_inputs_pool_csv
 from funcoes.configuracao import INTERVALO_AREA, CAMADA1, CAMADA2, CAMADA3, N_PROCESSOS_CSV
 
-def acha_duplicadas_csv(CSV_PATH):
+def acha_duplicadas_csv(CSV_PATH,CSV_OUTPUT):
     df = pd.read_csv(CSV_PATH)
     
-    iguais_dic = cria_processos(list(df["id"]),df)
-    print(iguais_dic)
+    iguais = cria_processos(list(df["id"]),df)
+    processa_resultado(iguais,CSV_OUTPUT)
+
+def processa_resultado(iguais,CSV_OUTPUT):
+    nome = []
+    lista_iguais = []
+    for igual in iguais:
+        nome.append(igual.pop(0))
+        lista_iguais.append(igual)
+    
+    final = DataFrame({"Nome":nome, "lista_iguais":lista_iguais})
+    final.to_csv(os.path.join(CSV_OUTPUT,"possiveis_iguais.csv"),index=False)
 
 def cria_processos(lista_ids,df):
     dic_total = {}
@@ -33,14 +45,11 @@ def procura_igual(ids,df):
         dados = get_informacoes(df_copy.loc[df_copy["id"] == id_])
         if CAMADA1:
             df_copy = camada1(df_copy,dados)
-            # if len(df_copy) == 1: continue
         if CAMADA2:
             df_copy = camada2(df_copy,dados)
-            # if len(df_copy) == 1: continue
         if CAMADA3:
             df_copy = camada3(df_copy,dados)
-            # if len(df_copy) == 1: continue
-        
+            
         if len(df_copy) >1:
             codigo = str(df.loc[df["id"] == id_]["cfr"].values[0]) + '-' + str(df.loc[df["id"] == id_]["ecd"].values[0])
             iguais_list = [f"{p}-{q}" for p,q in zip(list(df_copy["cfr"]),list(df_copy["ecd"]))]

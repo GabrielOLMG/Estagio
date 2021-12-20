@@ -1,4 +1,4 @@
-from logging import disable
+import ast
 import os
 import numpy as np
 import pandas as pd
@@ -15,34 +15,45 @@ def percorre_imoveis(CSV_PATH,FOTOS_PATH,CSV_PATH_OUTPUT):
         DOCUMENTAR
     """
     df = pd.read_csv(CSV_PATH)
-    info = list(zip(df["ecd"],df["cfr"]))
-    for i in range(len(info)-1):
-        imovel_atual = info[i]
-        resto = info[i+1:]
-        cria_processos(imovel_atual,resto,FOTOS_PATH,CSV_PATH_OUTPUT)
+    info = list(zip(df["Nome"],df["lista_iguais"]))
+    cria_processos(info,FOTOS_PATH,CSV_PATH_OUTPUT)
 
-def cria_processos(imovel_atual,lista_imoveis,FOTOS_PATH,CSV_PATH_OUTPUT):
-    imoveis_split = np.array_split(lista_imoveis,N_PROCESSOS)
-    inputs_list = gera_inputs_pool_imovel(imovel_atual,imoveis_split,FOTOS_PATH)
+def cria_processos(info,FOTOS_PATH,CSV_PATH_OUTPUT):
+    imoveis_split = np.array_split(info,N_PROCESSOS)    
+    inputs_list = gera_inputs_pool_imovel(imoveis_split,FOTOS_PATH)
+    
     with Pool(processes=N_PROCESSOS) as pool:
-        valores = pool.starmap(percorre_e_compara,inputs_list)
+        valores = pool.starmap(percorre_candidados_iguais,inputs_list)
     flat_list = [item for sublist in valores for item in sublist]
     atualiza_csv(CSV_PATH_OUTPUT,flat_list) 
 
-def percorre_e_compara(imovel_atual, imoveis,FOTOS_PATH):
-    path_atual = os.path.join(FOTOS_PATH,os.path.join(str(imovel_atual[0]),str(imovel_atual[1])))
-    img_imovel_atual = os.listdir(path_atual)
+def percorre_candidados_iguais(lista_para_comparar,FOTOS_PATH):
     resultados = []
-    for i,imovel_a_comparar in enumerate(imoveis):
-        if i%50 == 0: 
-            print('PROCESSO ',os.getpid(),' ---> ', i, 'de', len(imoveis), 'feito')
+    for comparaval in lista_para_comparar:
+        para_comparar = ast.literal_eval(comparaval[1]) + [comparaval[0]]
+        resultado = compara_possiveis_iguais(para_comparar,FOTOS_PATH)
+        resultados.extend(resultado)
+    return resultados
 
-        path_comparar = os.path.join(FOTOS_PATH, os.path.join(str(imovel_a_comparar[0]),str(imovel_a_comparar[1])))
-        img_imovel_a_comparar = os.listdir(path_comparar)
-        resultado = verifica_igualdade(path_atual,img_imovel_atual,path_comparar,img_imovel_a_comparar)
-        resultados.append(resultado)
+
+def compara_possiveis_iguais(lista_para_comparar,FOTOS_PATH):
+    resultados = []
+    for i,imovel1 in enumerate(lista_para_comparar):
+        nome_imovel1,nome_pasta1 = imovel1.split("-")
+        path_imovel1 = os.path.join(FOTOS_PATH,os.path.join(nome_pasta1,nome_imovel1))
+        img_imovel1 = os.listdir(path_imovel1)
+
+        for imovel2 in list(lista_para_comparar)[i+1:]:
+            nome_imovel2,nome_pasta2 = imovel2.split("-")
+            path_imovel2 = os.path.join(FOTOS_PATH,os.path.join(nome_pasta2,nome_imovel2))
+            img_imovel2 = os.listdir(path_imovel2)
+            resultado = verifica_igualdade(path_imovel1,img_imovel1,path_imovel2,img_imovel2)
+            resultados.append(resultado)
+    
+    
     
     return resultados
+        
 
 
 def verifica_igualdade(path_imovel_atual,img_imovel_atual,path_imovel_a_comparar,img_imovel_a_comparar):

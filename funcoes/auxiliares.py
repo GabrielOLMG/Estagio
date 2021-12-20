@@ -137,10 +137,10 @@ def atualiza_csv(CSV_PATH, lista):
 
 #--------------------------------------------------------------------------------#
 
-def gera_inputs_pool_imovel(imovel_atual,imoveis_split, FOTOS_PATH):
+def gera_inputs_pool_imovel(imoveis_split, FOTOS_PATH):
     input_ = []
     for i in range(len(imoveis_split)):
-        input_.append((imovel_atual,imoveis_split[i],FOTOS_PATH))
+        input_.append((imoveis_split[i],FOTOS_PATH))
     return input_
 
 

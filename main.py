@@ -9,7 +9,8 @@ from funcoes.compara_imoveis import compara_imoveis
 if __name__ == "__main__":
     PATH_FOTOS = "FOTOS"
     CSV_PATH_METADADO = "CSV_FILES\dados_gabriel.csv"
-    CSV_PATH_TESTE = "CSV_FILES/imoveis.csv"
+    CSV_PATH_METADADO_TESTE = "CSV_FILES\\teste2.csv"
+    CSV_PATH_TESTE = "CSV_OUTPUT\possiveis_iguais.csv"
     CSV_PATH_OUTPUT = "CSV_OUTPUT/"
 
     
@@ -17,18 +18,18 @@ if __name__ == "__main__":
     Passo 1
         - Dado o csv com o metadata dos imoveis, irei criar um novo csv contendo as imagens iguais
     '''
-    start = time.time()
-    acha_duplicadas_csv("CSV_FILES\\teste.csv")
-    stop = time.time()
-    print(f"<<The time of the run: {stop - start}>>")
+    # start = time.time()
+    # acha_duplicadas_csv(CSV_PATH_METADADO_TESTE,CSV_PATH_OUTPUT)
+    # stop = time.time()
+    # print(f"<<The time of the run: {stop - start}>>")
 
     '''
     Passo 2 
         - gera as hash
-        - verifica se  tem imagem repetida dentro e deleta as que estão repetidas
+        - verifica se  tem imagem repetida dentro e deleta as que estão repetidas()
     '''
     # start = time.time()
-    # gera_hash_imoveis(CSV_PATH_TESTE,PATH_FOTOS) # ja feito
+    # gera_hash_imoveis(CSV_PATH_METADADO,PATH_FOTOS) # ja feito
     # stop = time.time()
     # print(f"<<The time of the run: {stop - start}>>")
 
@@ -43,7 +44,7 @@ if __name__ == "__main__":
         - se dois imoveis são indeterminados, devo criar um csv contendo essa informação (imovel1 imovel2)
 
     '''
-    # start = time.time()
-    # compara_imoveis(CSV_PATH_TESTE,PATH_FOTOS,CSV_PATH_OUTPUT)
-    # stop = time.time()
-    # print(f"<<The time of the run: {stop - start}>>")
+    start = time.time()
+    compara_imoveis(CSV_PATH_TESTE,PATH_FOTOS,CSV_PATH_OUTPUT)
+    stop = time.time()
+    print(f"<<The time of the run: {stop - start}>>")
