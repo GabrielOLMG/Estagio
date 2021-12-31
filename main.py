@@ -21,29 +21,29 @@ if __name__ == "__main__":
     Passo 1
         - Dado o csv com o metadata dos imoveis, irei criar um novo csv contendo as imagens iguais
     '''
-    # start = time.time()
-    # acha_duplicadas_csv(CSV_PATH_METADADO_TESTE,CSV_PATH_POSSIVEIS_IGUAIS)
-    # stop = time.time()
-    # print(f"<<The time of the run: {stop - start}>>")
+    #start = time.time()
+    #acha_duplicadas_csv(CSV_PATH_METADADO,CSV_PATH_POSSIVEIS_IGUAIS)
+    #stop = time.time()
+    #print(f"<<The time of the run: {stop - start}>>")
 
     '''
     Passo 2 
         - gera as hash
         - verifica se  tem imagem repetida dentro e deleta as que estão repetidas()
     '''
-    # start = time.time()
+    #  start = time.time()
     # gera_hash_todos_imoveis(CSV_PATH_METADADO,PATH_FOTOS) # ja feito
     # stop = time.time()
     # print(f"<<The time of the run: {stop - start}>>")
 
     # ou
 
-    # start = time.time()
-    # gera_hash_possiveis_iguais(CSV_PATH_TESTE,PATH_FOTOS)
-    # stop = time.time()
-    # print(f"<<The time of the run: {stop - start}>>")
-
-    # print("---------------------------------------------------------------------------------------------------------------")
+    #start = time.time()
+    #gera_hash_possiveis_iguais(CSV_PATH_TESTE,PATH_FOTOS)
+    #stop = time.time()
+    #print(f"<<The time of the run: {stop - start}>>")
+    #29 horas para finalizar
+    print("---------------------------------------------------------------------------------------------------------------")
     '''
     # Passo 3 - Compara imoveis
         - compara imovel com imove

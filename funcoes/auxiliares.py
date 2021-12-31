@@ -70,16 +70,59 @@ def hamming_distance(hash1, hash2):
 import json
 import piexif
 import piexif.helper
+from PIL import Image
+
+
+
 def le_metadata(PATH_IMAGEM):
     """
         DOCUMENTAR
     """
+    dh,ph = None,None
+    try:
+        exif_dict = piexif.load(PATH_IMAGEM)
+        user_comment = piexif.helper.UserComment.load(exif_dict["Exif"][piexif.ExifIFD.UserComment])
+        hash = json.loads(user_comment)
+        dh = hash["dhash"]
+        ph = hash["phash"]
+    except: # caso de algum erro no loads ou user_comment ou pegar as devidas keys, ele devera 
+        dh,ph = calcula_hashs(PATH_IMAGEM)
+        print("rec " + PATH_IMAGEM)
+        PATH_IMAGEM = add_metadata(PATH_IMAGEM,{"dhash":dh, "phash":ph})
+        return le_metadata(PATH_IMAGEM)
+    return dh,ph,hash,PATH_IMAGEM
 
-    exif_dict = piexif.load(PATH_IMAGEM)
-    user_comment = piexif.helper.UserComment.load(exif_dict["Exif"][piexif.ExifIFD.UserComment])
-    hash = json.loads(user_comment)
-    return hash
+def add_metadata(PATH_IMAGEM, HASH_IMAGEM):
+    """
+        IRA ESCREVER NO METADATA DA IMAGEM OS SEUS DEVIDOS HASHS
 
+        :param PATH_IMAGEM = path da imagem
+        :param HASH_IMAGEM = dicionario contendo os hash
+    """
+    try:
+        exif_dict = piexif.load(PATH_IMAGEM)
+        
+        exif_dict["Exif"][piexif.ExifIFD.UserComment] = piexif.helper.UserComment.dump(json.dumps(HASH_IMAGEM), encoding="unicode")
+        piexif.insert(piexif.dump(exif_dict),PATH_IMAGEM)
+    except:
+        # piexif não suporta PNG, então vou passar de PNG para JPG
+        imagem = Image.open(PATH_IMAGEM)
+        imagemRGB = imagem.convert('RGB')
+        novo_nome = PATH_IMAGEM.split('.')[0] + '.jpg'
+        os.remove(PATH_IMAGEM) # remove a imagem antiga
+        imagemRGB.save(novo_nome)
+        
+        try: 
+            exif_dict = piexif.load(novo_nome)
+            exif_dict["Exif"][piexif.ExifIFD.UserComment] = piexif.helper.UserComment.dump(json.dumps(HASH_IMAGEM), encoding="unicode")
+            piexif.insert(piexif.dump(exif_dict),novo_nome)
+            return novo_nome
+        except:
+            print(f"ERRO Novo Nome = {novo_nome} Antigo Nome = {PATH_IMAGEM}")
+            #volta a como estava antes
+            os.remove(novo_nome)
+            imagem.save(PATH_IMAGEM)
+    return PATH_IMAGEM
 #--------------------------------------------------------------------------------#
 import pandas as pd
 import os

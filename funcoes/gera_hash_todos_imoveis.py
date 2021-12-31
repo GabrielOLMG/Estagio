@@ -63,17 +63,19 @@ def percorre_imovel(PATH_IMOVEL):
     """
 
     imagens = os.listdir(PATH_IMOVEL)
+    imagensL = []
     phash = []
     dhash = []
 
     for imagem in imagens:
         path_imagem = os.path.join(PATH_IMOVEL,imagem)
-        dh,ph = calcula_hashs(path_imagem)
+        dh,ph,_,new_name = le_metadata(path_imagem)
+        imagensL.append(new_name)
         phash.append(ph)
         dhash.append(dh)
-        add_metadata(path_imagem,{"dhash":dh, "phash":ph})
 
-    encontra_iguais(dhash,phash,imagens,PATH_IMOVEL)
+
+    encontra_iguais(dhash,phash,imagensL,PATH_IMOVEL)
 
 
 def encontra_iguais(dhash,phash, imagens,PATH_IMOVEL):
@@ -114,16 +116,16 @@ def analisa_duplicadas(duplicadas,PATH_IMOVEL):
         maior_tamanho = 0
         maior_nome = None
         for image_name in  duplicadas_iguais:
-            path_image = os.path.join(PATH_IMOVEL, image_name)
-            image = Image.open(path_image)
+            # path_image = os.path.join(PATH_IMOVEL, image_name)
+            image = Image.open(image_name)
             width, height = image.size
             area = width*height
             if area > maior_tamanho:
                 if maior_nome is not None: para_remover.append(maior_nome)
-                maior_nome = path_image
+                maior_nome = image_name
                 maior_tamanho = area
             else:
-                para_remover.append(path_image)
+                para_remover.append(image_name)
                 
 
     return para_remover
@@ -137,33 +139,5 @@ def remove_imagem_duplicada(para_remover):
         os.remove(imagem)
 
 
-def add_metadata(PATH_IMAGEM, HASH_IMAGEM):
-    """
-        IRA ESCREVER NO METADATA DA IMAGEM OS SEUS DEVIDOS HASHS
 
-        :param PATH_IMAGEM = path da imagem
-        :param HASH_IMAGEM = dicionario contendo os hash
-    """
-    try:
-        exif_dict = piexif.load(PATH_IMAGEM)
-        
-        exif_dict["Exif"][piexif.ExifIFD.UserComment] = piexif.helper.UserComment.dump(json.dumps(HASH_IMAGEM), encoding="unicode")
-        piexif.insert(piexif.dump(exif_dict),PATH_IMAGEM)
-    except:
-        # piexif não suporta PNG, então vou passar de PNG para JPG
-        imagem = Image.open(PATH_IMAGEM)
-        imagemRGB = imagem.convert('RGB')
-        novo_nome = PATH_IMAGEM.split('.')[0] + '.jpg'
-        os.remove(PATH_IMAGEM) # remove a imagem antiga
-        imagemRGB.save(novo_nome)
-        
-        try: 
-            exif_dict = piexif.load(novo_nome)
-            exif_dict["Exif"][piexif.ExifIFD.UserComment] = piexif.helper.UserComment.dump(json.dumps(HASH_IMAGEM), encoding="unicode")
-            piexif.insert(piexif.dump(exif_dict),novo_nome)
-        except:
-            print(f"ERRO Novo Nome = {novo_nome} Antigo Nome = {PATH_IMAGEM}")
-            #volta a como estava antes
-            os.remove(novo_nome)
-            imagem.save(PATH_IMAGEM)
 

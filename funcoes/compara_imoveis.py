@@ -75,14 +75,16 @@ def verifica_igualdade(path_imovel_atual,img_imovel_atual,path_imovel_a_comparar
             path_img_atual = os.path.join(menor[0],img_atual)
             path_img_comparar = os.path.join(maior[0],img_comparar)
             try:
-                dhash_atual = le_metadata(path_img_atual)["dhash"]
+                _,_,info_atual,_ = le_metadata(path_img_atual)
+                dhash_atual = info_atual["dhash"]
             except:
-                print("Erro ao ler a imagem ",path_img_atual)
+                print("Erro ao ler dhash_atual ",path_img_atual)
                 continue
             try:
-                dhash_comparar = le_metadata(path_img_comparar)["dhash"]
+                _,_,info_comparar,_ = le_metadata(path_img_comparar)
+                dhash_comparar = info_comparar["dhash"]
             except:
-                print("Erro ao ler a imagem ",path_img_comparar)
+                print("Erro ao ler a dhash_comparar ",path_img_comparar)
                 continue
 
             distancia_hash = hamming_distance(dhash_atual,dhash_comparar)
@@ -91,17 +93,21 @@ def verifica_igualdade(path_imovel_atual,img_imovel_atual,path_imovel_a_comparar
 
             if valor == 1:
                 iguais+=1
+                break
             elif valor == 2:
                 indeterminado+=1
+                break
 
     return classifica_imoveis(iguais,indeterminado,len(menor[1]),menor[0],maior[0])
     
 
 def classifica_imoveis(iguais,indeterminado,tamanho_imovel_atual,path_imovel_atual,path_imovel_a_comparar):
-    prop_igual = (iguais)/tamanho_imovel_atual
+    
+    prop_igual = (iguais)/tamanho_imovel_atual # se no imovel1 tem uma imagem e no imovel 2 ele acha 2 iguais ao 1, entao fica 2/1, q e maior q 1
     prop_ind = (indeterminado)/tamanho_imovel_atual
     diferentes,prop_dif = (tamanho_imovel_atual - iguais - indeterminado,1 - (prop_igual + prop_ind))
     todas_proporcoes = (prop_igual,prop_ind,prop_dif)
+    # print(f"iguais = {iguais} indeterminado = {indeterminado} diferentes = {diferentes} tamanho_imovel_atual = {tamanho_imovel_atual}")
     if prop_igual >= PROPORCAO_IGUAIS and diferentes <= DIFERENCA_MAXIMA:
         return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, 1)
     elif prop_dif >= PROPORCAO_DIFERENTES:

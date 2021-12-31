@@ -1,6 +1,6 @@
 import multiprocessing as mp
 #--------------------------------------------------------------------------------#
-#------------------------------gera_hash_imoveis.py------------------------------#   
+#-----------------------------acha_duplicadas_csv.py-----------------------------#   
 #--------------------------------------------------------------------------------#
 N_PROCESSOS_CSV = mp.cpu_count() //2
 
@@ -62,4 +62,4 @@ PROPORCAO_INDETERMINADOS = 0.8
 DIFERENCA_MAXIMA = 2
 
 # Quantidade de processos em que serão divididos 
-N_PROCESSOS = mp.cpu_count()//4 
+N_PROCESSOS = mp.cpu_count()//2
