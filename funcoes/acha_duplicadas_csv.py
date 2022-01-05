@@ -2,12 +2,12 @@ import os
 import json
 import numpy as np
 import pandas as pd
-import json
-from multiprocessing import Pool
 
+from collections import Counter
+from multiprocessing import Pool
 from pandas.core.frame import DataFrame
 from funcoes.auxiliares import simplificaDuplicadas, gera_inputs_pool_csv
-from funcoes.configuracao import INTERVALO_AREA, CAMADA1, CAMADA2, CAMADA3, N_PROCESSOS_CSV
+from funcoes.configuracao import INTERVALO_AREA, CAMADA1, CAMADA2, CAMADA3, MIN_IGUAL_C1, N_PROCESSOS_CSV
 
 def acha_duplicadas_csv(CSV_PATH,CSV_OUTPUT):
     df = pd.read_csv(CSV_PATH)
@@ -23,7 +23,7 @@ def processa_resultado(iguais,CSV_OUTPUT):
         lista_iguais.append(igual)
     
     final = DataFrame({"Nome":nome, "lista_iguais":lista_iguais})
-    final.to_csv(os.path.join(CSV_OUTPUT,"possiveis_iguais.csv"),index=False)
+    final.to_csv(os.path.join(CSV_OUTPUT,"possiveis_iguais2.csv"),index=False)
 
 def cria_processos(lista_ids,df):
     dic_total = {}
@@ -72,18 +72,23 @@ def get_informacoes(df):
     dados["terreno"] = df["terreno"].values[0]
     dados["freguesia"] = df["freguesia_id"].values[0]
     dados["regiao"] = df["regiao_id"].values[0]
-    dados["classe_energetica"] = df["classe_energetica_id"].values[0]
+    dados["classe_energetica_id"] = df["classe_energetica_id"].values[0]
     dados["data_public"] = json.loads(df["data_public"].values[0])
 
     return dados
 
 def camada1(df,dados):
-    resto = df.loc[(df["tipo"] == dados["tipo"]) &
-               (df["classe_energetica_id"] == dados["classe_energetica"]) &
-               (df["garagem"] == dados["garagem"]) &
-               (df["terraco"] == dados["terraco"]) &
-               (df["piscina"] == dados["piscina"]) &
-               (df["terreno"] == dados["terreno"])]            
+    todos_ids = []
+    colunas = ['tipo','classe_energetica_id','garagem','terraco','piscina','terreno']
+    for coluna in colunas:
+        df_resumido = df.loc[df[coluna] == dados[coluna]]
+
+        todos_ids.extend(list(df_resumido['id']))
+
+    ids_freq = Counter(todos_ids)
+
+    lista_ids = [id_ for id_,frequencia in ids_freq.items() if frequencia >= MIN_IGUAL_C1]
+    resto = df[df['id'].isin(lista_ids)]
     return resto
 
 def camada2(df,dados):

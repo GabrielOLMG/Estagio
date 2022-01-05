@@ -108,11 +108,12 @@ def classifica_imoveis(iguais,indeterminado,tamanho_imovel_atual,path_imovel_atu
     diferentes,prop_dif = (tamanho_imovel_atual - iguais - indeterminado,1 - (prop_igual + prop_ind))
     todas_proporcoes = (prop_igual,prop_ind,prop_dif)
     # print(f"iguais = {iguais} indeterminado = {indeterminado} diferentes = {diferentes} tamanho_imovel_atual = {tamanho_imovel_atual}")
-    if prop_igual >= PROPORCAO_IGUAIS and diferentes <= DIFERENCA_MAXIMA:
+    
+    if prop_igual >= PROPORCAO_IGUAIS and diferentes <= DIFERENCA_MAXIMA and iguais >= IGUAIS_MINIMA:
         return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, 1)
     elif prop_dif >= PROPORCAO_DIFERENTES:
         return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, 3)
-    elif (prop_igual <= PROPORCAO_IGUAIS and iguais >=1) or (prop_ind >= PROPORCAO_INDETERMINADOS):
+    elif (prop_igual <= PROPORCAO_IGUAIS and iguais >=1) or (prop_ind >= PROPORCAO_INDETERMINADOS) or (iguais < IGUAIS_MINIMA):
         return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, 2)
     else:
         return (path_imovel_atual, path_imovel_a_comparar, todas_proporcoes, -1)

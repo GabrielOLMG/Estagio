@@ -21,10 +21,10 @@ if __name__ == "__main__":
     Passo 1
         - Dado o csv com o metadata dos imoveis, irei criar um novo csv contendo as imagens iguais
     '''
-    #start = time.time()
-    #acha_duplicadas_csv(CSV_PATH_METADADO,CSV_PATH_POSSIVEIS_IGUAIS)
-    #stop = time.time()
-    #print(f"<<The time of the run: {stop - start}>>")
+    start = time.time()
+    acha_duplicadas_csv(CSV_PATH_METADADO,CSV_PATH_POSSIVEIS_IGUAIS)
+    stop = time.time()
+    print(f"<<The time of the run: {stop - start}>>")
 
     '''
     Passo 2 
@@ -54,7 +54,7 @@ if __name__ == "__main__":
         - se dois imoveis são indeterminados, devo criar um csv contendo essa informação (imovel1 imovel2)
 
     '''
-    start = time.time()
-    compara_imoveis(CSV_PATH_TESTE,PATH_FOTOS,CSV_PATH_OUTPUT)
-    stop = time.time()
-    print(f"<<The time of the run: {stop - start}>>")
+    # start = time.time()
+    # compara_imoveis(CSV_PATH_TESTE,PATH_FOTOS,CSV_PATH_OUTPUT)
+    # stop = time.time()
+    # print(f"<<The time of the run: {stop - start}>>")

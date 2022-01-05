@@ -1,44 +1,46 @@
 import pandas as pd
 import os
-'''
-    Funções/Classes de teste
-'''
-#--------------------------------------------- Faz um csv com todos os imoveis, para simular.
+import json
+from collections import Counter
+from funcoes.configuracao import *
 
-def percorre_pastas(PATH, CSV_PATH):
-    pastas = os.listdir(PATH)
-    nomes_todos = []
-    paths_todos = []
-    pasta_todos = []
-    for pasta in pastas:
-        # if(pasta == "0"): continue
-        path_pasta = os.path.join(PATH, pasta)
-        nomes,paths = percorre_imoveis(path_pasta)
-        nomes_todos.extend(nomes)
-        paths_todos.extend(paths)
-        pasta_todos.extend([pasta]*len(nomes))
-        
-        break
-    cria_csv(nomes_todos,pasta_todos, CSV_PATH)
+def get_informacoes(df):
+    dados = {}
+    dados["tipo"] = df["tipo"].values[0]
+    dados["tipologia"] = df["tipologia"].values[0]
+    dados["garagem"] = df["garagem"].values[0]
+    dados["terraco"] = df["terraco"].values[0]
+    dados["piscina"] = df["piscina"].values[0]
+    dados["terreno"] = df["terreno"].values[0]
+    dados["freguesia"] = df["freguesia_id"].values[0]
+    dados["regiao"] = df["regiao_id"].values[0]
+    dados["classe_energetica_id"] = df["classe_energetica_id"].values[0]
+    dados["data_public"] = json.loads(df["data_public"].values[0])
 
-def percorre_imoveis(PATH):
-    imoveis = os.listdir(PATH)
-    nomes = []
-    paths = []
-    for imovel in imoveis:
-        nome = imovel
-        path = os.path.join(PATH,imovel)
-        nomes.append(nome)
-        paths.append(path)
-    return nomes,paths
-
-def cria_csv(NOMES,PASTAS,CSV_PATH):
-    dicionario = {"cfr":NOMES, "ecd" :PASTAS}
-    df = pd.DataFrame(dicionario)
-    df.to_csv(CSV_PATH,index=False)
+    return dados
 
 
-if __name__ == '__main__':
-    path_ = "FOTOS"
-    path_csv = "CSV_FILES/imoveis.csv"
-    percorre_pastas(path_,path_csv)
+def camada1(df,dados):
+    todos_ids = []
+    colunas = ['tipo','classe_energetica_id','garagem','terraco','piscina','terreno']
+    for coluna in colunas:
+        df_resumido = df.loc[df[coluna] == dados[coluna]]
+
+        todos_ids.extend(list(df_resumido['id']))
+
+    ids_freq = Counter(todos_ids)
+
+    lista_ids = [id_ for id_,frequencia in ids_freq.items() if frequencia >= MIN_IGUAL]
+    resto = df[df['id'].isin(lista_ids)]
+    return resto
+
+
+CSV_PATH_METADADO = "CSV_FILES\dados_gabriel.csv"
+df = pd.read_csv(CSV_PATH_METADADO)
+lista_ids = list(df["id"])
+df_copy = df.copy()
+
+for i,id_ in enumerate(lista_ids):
+    dados = get_informacoes(df_copy.loc[df_copy["id"] == id_])
+    resto = camada1(df_copy,dados)
+    if i%100 == 0: print(f"{i} de um total de {len(lista_ids)}")

@@ -8,22 +8,26 @@ N_PROCESSOS_CSV = mp.cpu_count() //2
 # com menos chance de ter tido erro ao gear o csv e a camada 3 é a mais especifica,
 # com possiveis erros no csv. 
 
-# Camada 1:
+#                                           Camada 1:
 #  - tipo
 #  - classe_energetica_id
 #  - garagem
 #  - terraco
 #  - piscina
 #  - terreno    
+#  Para um imovel ser considerado igual ele tem que ter pelo menos um MIN_IGUAL de caracteristicas iguais 
 CAMADA1 = True
-# Camada 2:
+MIN_IGUAL_C1 = 4
+
+#                                           Camada 2:
 #  - 'data_public'-abp
 #       ->Porcentagem abaixo e acima que podemos considerar uma area realtivamente perto uma da outra.
 #       ->(1 - INTERVALO_AREA) é a menor area aceitavel 
 #       ->(1 + INTERVALO_AREA) é a maior area aceitavel
 CAMADA2 = True
 INTERVALO_AREA = 0.25
-# Camada 3: 
+
+#                                           Camada 3: 
 #     -  tipologia  
 #     -  freguesia_id
 #     -  regiao_id  
@@ -60,6 +64,9 @@ PROPORCAO_INDETERMINADOS = 0.8
 
 # Quantidade de quantidade de imagens diferentes aceitavel entre 2 imoveis
 DIFERENCA_MAXIMA = 2
+
+# Quantidade de imagens iguais minimas para que seja considerado iguais, valores abaixo disso sao indeterminados
+IGUAIS_MINIMA = 2
 
 # Quantidade de processos em que serão divididos 
 N_PROCESSOS = mp.cpu_count()//2
